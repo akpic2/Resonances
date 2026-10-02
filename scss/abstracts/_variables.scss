@@ -1,94 +1,82 @@
 // Rôle : jetons de conception, source unique des valeurs du guide visuel
-// Sass : calculs, media queries et boucles (compilation).
-// Propriétés personnalisées (base/_tokens) : cascade et thèmes (navigateur).
+// Variables Sass : utilisables à la compilation (calculs, media queries).
+// Propriétés personnalisées (base/_tokens) : utilisables dans le navigateur (cascade, thèmes).
 // Les points de rupture restent en Sass : var() ne marche pas dans une media query.
 
-$colors: (
-  'text':           #1C1B2E,
-  'text-body':      #3A3950,
-  'text-muted':     #6B6A80,
-  'background':     #FFFFFF,
-  'background-alt': #F4F5F7,
-  'border':         #E3E5EA,
-  'border-field':   #CBD0D8,
-  'primary':        #C8402A,
-  'primary-hover':  #A3311F,
-  'accent':         #F4C95D,
-  'error':          #B3261E,
-  'focus-ring':     #F2B8AC,
-);
+// Couleurs
+$color-text: #1C1B2E;
+$color-text-body: #3A3950;
+$color-text-muted: #6B6A80;
+$color-background: #FFFFFF;
+$color-background-alt: #F4F5F7;
+$color-border: #E3E5EA;
+$color-border-field: #CBD0D8;
+$color-primary: #C8402A;
+$color-primary-hover: #A3311F;
+$color-accent: #F4C95D;
+$color-error: #B3261E;
+$color-focus-ring: #F2B8AC;
 
-$scenes: (
-  'lake':            #1F4E8C,
-  'lake-contrast':   #FFFFFF,
-  'forest':          #2F6B3A,
-  'forest-contrast': #FFFFFF,
-  'kiosk':           #B87A1E,
-  'kiosk-contrast':  #1C1B2E,
-);
+// Scènes (contrast = couleur du texte posé sur la scène)
+$scene-lake: #1F4E8C;
+$scene-lake-contrast: #FFFFFF;
+$scene-forest: #2F6B3A;
+$scene-forest-contrast: #FFFFFF;
+$scene-kiosk: #B87A1E;
+$scene-kiosk-contrast: #1C1B2E;
 
-$font-family: ('Inter', system-ui, sans-serif);
+// Police
+$font-family: 'Inter', system-ui, sans-serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 800;
 
-$font-weights: (
-  'regular': 400,
-  'bold':    700,
-  'black':   800,
-);
+// Tailles de police
+$font-size-display: 56px;
+$font-size-heading: 40px;
+$font-size-subheading: 28px;
+$font-size-lead: 20px;
+$font-size-body: 16px;
+$font-size-label: 15px;
+$font-size-small: 14px;
+$font-size-caption: 13px;
+$font-size-legend: 12px;
 
-$font-sizes: (
-  'display':    56px,
-  'heading':    40px,
-  'subheading': 28px,
-  'lead':       20px,
-  'body':       16px,
-  'label':      15px,
-  'small':      14px,
-  'caption':    13px,
-  'legend':     12px,
-);
+// Interlignes sans unité : interligne de la maquette ÷ taille de police
+$line-height-display: calc(64 / 56);
+$line-height-heading: calc(48 / 40);
+$line-height-subheading: calc(36 / 28);
+$line-height-lead: calc(32 / 20);
+$line-height-body: calc(26 / 16);
+$line-height-label: calc(18 / 15);
+$line-height-small: calc(22 / 14);
+$line-height-caption: calc(16 / 13);
+$line-height-legend: calc(15 / 12);
 
-// Interlignes en px, convertis en coefficients dans base/_tokens
-$line-heights: (
-  'display':    64px,
-  'heading':    48px,
-  'subheading': 36px,
-  'lead':       32px,
-  'body':       26px,
-  'label':      18px,
-  'small':      22px,
-  'caption':    16px,
-  'legend':     15px,
-);
+// Espacements
+$space-xs: 8px;
+$space-sm: 16px;
+$space-md: 24px;
+$space-lg: 40px;
+$space-xl: 64px;
 
-$spaces: (
-  'xs': 8px,
-  'sm': 16px,
-  'md': 24px,
-  'lg': 40px,
-  'xl': 64px,
-);
+// Rayons
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-pill: 999px;
 
-$radii: (
-  'sm':   6px,
-  'md':   12px,
-  'pill': 999px,
-);
+// Bordures
+$border-thin: 1px;
+$border-thick: 2px;
+$border-focus: 3px;
 
-$borders: (
-  'thin':  1px,
-  'thick': 2px,
-  'focus': 3px,
-);
+// Mise en page
+$layout-container: 1200px;
+$layout-header-height: 88px;
+$layout-control: 48px;
+$layout-label-column: 240px;
 
-$layout: (
-  'container':     1200px,
-  'header-height': 88px,
-  'control':       48px,
-  'label-column':  240px,
-);
-
-$breakpoints: (
-  'tablet':  768px,
-  'desktop': 1024px,
-  'wide':    1440px,
-);
+// Points de rupture
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;

@@ -2,39 +2,39 @@
 // L'intro (20px) est une classe, donc hors de base/.
 
 body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-body);
-  color: var(--color-text-body);
-  background-color: var(--color-background);
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-body);
+    background-color: var(--color-background);
 }
 
 h1,
 h2,
 h3 {
-  color: var(--color-text);
+    color: var(--color-text);
 }
 
 h1 {
-  font-size: var(--font-size-display);
-  font-weight: var(--font-weight-black);
-  line-height: var(--line-height-display);
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-display);
 }
 
 h2 {
-  font-size: var(--font-size-heading);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
 }
 
 h3 {
-  font-size: var(--font-size-subheading);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-subheading);
+    font-size: var(--font-size-subheading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-subheading);
 }
 
 small {
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
 }

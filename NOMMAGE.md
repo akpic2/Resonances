@@ -131,21 +131,21 @@ Grandes zones de la page : elles placent les composants mais n'en sont pas.
 
 ### `l-docs`
 
-|                   |                                                                                                       |
-| ----------------- | ----------------------------------------------------------------------------------------------------- |
-| **Rôle**          | Mise en forme de la page des composants                                                               |
-| **Pages**         | composants                                                                                            |
-| **Éléments**      | intro : `__intro`, `__breadcrumb`, `__title`, `__lead`                                                |
-|                   | sommaire : `__toc`, `__toc-link`                                                                      |
-|                   | sections : `__section`, `__section-title`, `__section-text`                                           |
-|                   | lignes : `__row`, `__label`, `__examples`                                                             |
-|                   | jetons : `__swatch`, `__swatch-color`, `__scene`, `__scene-color`, `__type`, `__space`, `__space-box` |
-| **Modificateurs** | `__swatch--{couleur}` : une par couleur de `$colors`                                                  |
-|                   | `__scene--lake`, `__scene--forest`, `__scene--kiosk`                                                  |
-|                   | `__type--display`, `--heading`, `--subheading`, `--lead`, `--body`, `--small`                         |
-|                   | `__space--xs`, `--sm`, `--md`, `--lg`, `--xl`                                                         |
-| **États**         | `:hover` sur `__toc-link`                                                                             |
-| **Thème**         | —                                                                                                     |
+|                   |                                                                                                                         |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Rôle**          | Mise en forme de la page des composants                                                                                 |
+| **Pages**         | composants                                                                                                              |
+| **Éléments**      | intro : `__intro`, `__breadcrumb`, `__title`, `__lead`                                                                  |
+|                   | sommaire : `__toc`, `__toc-link`                                                                                        |
+|                   | sections : `__section`, `__section-title`, `__section-text`                                                             |
+|                   | lignes : `__row`, `__label`, `__examples`                                                                               |
+|                   | jetons : `__swatch`, `__swatch-color`, `__swatch-value`, `__scene`, `__scene-color`, `__type`, `__space`, `__space-box` |
+| **Modificateurs** | `__swatch--{couleur}` : un par jeton de couleur (`--primary`, `--error`…)                                               |
+|                   | `__scene--lake`, `__scene--forest`, `__scene--kiosk`                                                                    |
+|                   | `__type--display`, `--heading`, `--subheading`, `--lead`, `--body`, `--small`                                           |
+|                   | `__space--xs`, `--sm`, `--md`, `--lg`, `--xl`                                                                           |
+| **États**         | `:hover` sur `__toc-link`                                                                                               |
+| **Thème**         | —                                                                                                                       |
 
 <br>
 
