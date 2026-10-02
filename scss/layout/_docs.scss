@@ -1,0 +1,288 @@
+// Rôle : mise en page de composants.html (introduction, sommaire, sections, jetons)
+// Les ::after affichent la valeur lue dans les maps : le texte suit la couleur à la compilation.
+@use 'sass:map';
+@use '../abstracts' as *;
+
+.l-docs {
+  padding-block-end: var(--space-xl);
+
+  &__intro {
+    padding-block: var(--space-lg);
+    background-color: var(--color-background-alt);
+  }
+
+  &__breadcrumb {
+    margin-block-end: var(--space-sm);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    color: var(--color-text-muted);
+  }
+
+  &__title {
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+  }
+
+  &__lead {
+    margin-block-start: var(--space-sm);
+    font-size: var(--font-size-lead);
+    line-height: var(--line-height-lead);
+  }
+
+  &__toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-lg);
+    margin-block-start: var(--space-lg);
+    padding-block-end: var(--space-md);
+    border-block-end: var(--border-thin) solid var(--color-border);
+  }
+
+  &__toc-link {
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-label);
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__section {
+    margin-block-start: var(--space-xl);
+  }
+
+  &__section-title {
+    padding-block-end: var(--space-sm);
+    border-block-end: var(--border-thick) solid var(--color-primary);
+    font-size: var(--font-size-subheading);
+    line-height: var(--line-height-subheading);
+  }
+
+  &__section-text {
+    margin-block-start: var(--space-sm);
+    color: var(--color-text-muted);
+  }
+
+  &__row {
+    display: grid;
+    gap: var(--space-sm);
+    align-items: center;
+    margin-block-start: var(--space-lg);
+
+    @media (min-width: map.get($breakpoints, 'tablet')) {
+      grid-template-columns: var(--layout-label-column) 1fr;
+    }
+  }
+
+  &__label {
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-label);
+    color: var(--color-text);
+  }
+
+  &__examples {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--space-md) var(--space-lg);
+  }
+
+  &__swatch {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    font-size: var(--font-size-legend);
+    line-height: var(--line-height-legend);
+    color: var(--color-text-muted);
+  }
+
+  &__swatch-color {
+    width: var(--layout-control);
+    height: var(--layout-control);
+    border: var(--border-thin) solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background-color: var(--swatch-color);
+  }
+
+  &__swatch--text {
+    --swatch-color: var(--color-text);
+    &::after { content: "#{map.get($colors, 'text')}"; }
+  }
+
+  &__swatch--text-body {
+    --swatch-color: var(--color-text-body);
+    &::after { content: "#{map.get($colors, 'text-body')}"; }
+  }
+
+  &__swatch--text-muted {
+    --swatch-color: var(--color-text-muted);
+    &::after { content: "#{map.get($colors, 'text-muted')}"; }
+  }
+
+  &__swatch--background {
+    --swatch-color: var(--color-background);
+    &::after { content: "#{map.get($colors, 'background')}"; }
+  }
+
+  &__swatch--background-alt {
+    --swatch-color: var(--color-background-alt);
+    &::after { content: "#{map.get($colors, 'background-alt')}"; }
+  }
+
+  &__swatch--border {
+    --swatch-color: var(--color-border);
+    &::after { content: "#{map.get($colors, 'border')}"; }
+  }
+
+  &__swatch--border-field {
+    --swatch-color: var(--color-border-field);
+    &::after { content: "#{map.get($colors, 'border-field')}"; }
+  }
+
+  &__swatch--primary {
+    --swatch-color: var(--color-primary);
+    &::after { content: "#{map.get($colors, 'primary')}"; }
+  }
+
+  &__swatch--primary-hover {
+    --swatch-color: var(--color-primary-hover);
+    &::after { content: "#{map.get($colors, 'primary-hover')}"; }
+  }
+
+  &__swatch--accent {
+    --swatch-color: var(--color-accent);
+    &::after { content: "#{map.get($colors, 'accent')}"; }
+  }
+
+  &__swatch--error {
+    --swatch-color: var(--color-error);
+    &::after { content: "#{map.get($colors, 'error')}"; }
+  }
+
+  &__swatch--focus-ring {
+    --swatch-color: var(--color-focus-ring);
+    &::after { content: "#{map.get($colors, 'focus-ring')}"; }
+  }
+
+  &__scene {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    font-size: var(--font-size-legend);
+    line-height: var(--line-height-legend);
+    color: var(--color-text-muted);
+  }
+
+  &__scene-color {
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-small);
+    color: var(--scene-contrast);
+    background-color: var(--scene-color);
+  }
+
+  &__scene--lake {
+    --scene-color: var(--scene-lake);
+    --scene-contrast: var(--scene-lake-contrast);
+    &::after { content: "#{map.get($scenes, 'lake')}"; }
+  }
+
+  &__scene--forest {
+    --scene-color: var(--scene-forest);
+    --scene-contrast: var(--scene-forest-contrast);
+    &::after { content: "#{map.get($scenes, 'forest')}"; }
+  }
+
+  &__scene--kiosk {
+    --scene-color: var(--scene-kiosk);
+    --scene-contrast: var(--scene-kiosk-contrast);
+    &::after { content: "#{map.get($scenes, 'kiosk')}"; }
+  }
+
+  &__type {
+    color: var(--color-text);
+  }
+
+  &__type--display {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-display);
+  }
+
+  &__type--heading {
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+  }
+
+  &__type--subheading {
+    font-size: var(--font-size-subheading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-subheading);
+  }
+
+  &__type--lead {
+    font-size: var(--font-size-lead);
+    line-height: var(--line-height-lead);
+    color: var(--color-text-body);
+  }
+
+  &__type--body {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-text-body);
+  }
+
+  &__type--small {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    color: var(--color-text-muted);
+  }
+
+  &__space {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    font-size: var(--font-size-legend);
+    line-height: var(--line-height-legend);
+    color: var(--color-text-muted);
+  }
+
+  &__space-box {
+    width: var(--space-size);
+    height: var(--space-size);
+    background-color: var(--color-primary);
+  }
+
+  &__space--xs {
+    --space-size: var(--space-xs);
+    &::after { content: "#{map.get($spaces, 'xs')}"; }
+  }
+
+  &__space--sm {
+    --space-size: var(--space-sm);
+    &::after { content: "#{map.get($spaces, 'sm')}"; }
+  }
+
+  &__space--md {
+    --space-size: var(--space-md);
+    &::after { content: "#{map.get($spaces, 'md')}"; }
+  }
+
+  &__space--lg {
+    --space-size: var(--space-lg);
+    &::after { content: "#{map.get($spaces, 'lg')}"; }
+  }
+
+  &__space--xl {
+    --space-size: var(--space-xl);
+    &::after { content: "#{map.get($spaces, 'xl')}"; }
+  }
+}

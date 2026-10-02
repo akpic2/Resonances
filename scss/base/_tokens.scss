@@ -1,0 +1,71 @@
+// Rôle : jetons exposés au navigateur en propriétés personnalisées sur :root
+// Écrit à la main pour l'instant, généré par une boucle à l'étape 6.
+@use 'sass:map';
+@use 'sass:math';
+@use '../abstracts' as *;
+
+:root {
+  --color-text: #{map.get($colors, 'text')};
+  --color-text-body: #{map.get($colors, 'text-body')};
+  --color-text-muted: #{map.get($colors, 'text-muted')};
+  --color-background: #{map.get($colors, 'background')};
+  --color-background-alt: #{map.get($colors, 'background-alt')};
+  --color-border: #{map.get($colors, 'border')};
+  --color-border-field: #{map.get($colors, 'border-field')};
+  --color-primary: #{map.get($colors, 'primary')};
+  --color-primary-hover: #{map.get($colors, 'primary-hover')};
+  --color-accent: #{map.get($colors, 'accent')};
+  --color-error: #{map.get($colors, 'error')};
+  --color-focus-ring: #{map.get($colors, 'focus-ring')};
+
+  --scene-lake: #{map.get($scenes, 'lake')};
+  --scene-lake-contrast: #{map.get($scenes, 'lake-contrast')};
+  --scene-forest: #{map.get($scenes, 'forest')};
+  --scene-forest-contrast: #{map.get($scenes, 'forest-contrast')};
+  --scene-kiosk: #{map.get($scenes, 'kiosk')};
+  --scene-kiosk-contrast: #{map.get($scenes, 'kiosk-contrast')};
+
+  --font-family: #{$font-family};
+  --font-weight-regular: #{map.get($font-weights, 'regular')};
+  --font-weight-bold: #{map.get($font-weights, 'bold')};
+  --font-weight-black: #{map.get($font-weights, 'black')};
+
+  --font-size-display: #{map.get($font-sizes, 'display')};
+  --font-size-heading: #{map.get($font-sizes, 'heading')};
+  --font-size-subheading: #{map.get($font-sizes, 'subheading')};
+  --font-size-lead: #{map.get($font-sizes, 'lead')};
+  --font-size-body: #{map.get($font-sizes, 'body')};
+  --font-size-label: #{map.get($font-sizes, 'label')};
+  --font-size-small: #{map.get($font-sizes, 'small')};
+  --font-size-caption: #{map.get($font-sizes, 'caption')};
+  --font-size-legend: #{map.get($font-sizes, 'legend')};
+
+  --line-height-display: #{math.div(map.get($line-heights, 'display'), map.get($font-sizes, 'display'))};
+  --line-height-heading: #{math.div(map.get($line-heights, 'heading'), map.get($font-sizes, 'heading'))};
+  --line-height-subheading: #{math.div(map.get($line-heights, 'subheading'), map.get($font-sizes, 'subheading'))};
+  --line-height-lead: #{math.div(map.get($line-heights, 'lead'), map.get($font-sizes, 'lead'))};
+  --line-height-body: #{math.div(map.get($line-heights, 'body'), map.get($font-sizes, 'body'))};
+  --line-height-label: #{math.div(map.get($line-heights, 'label'), map.get($font-sizes, 'label'))};
+  --line-height-small: #{math.div(map.get($line-heights, 'small'), map.get($font-sizes, 'small'))};
+  --line-height-caption: #{math.div(map.get($line-heights, 'caption'), map.get($font-sizes, 'caption'))};
+  --line-height-legend: #{math.div(map.get($line-heights, 'legend'), map.get($font-sizes, 'legend'))};
+
+  --space-xs: #{map.get($spaces, 'xs')};
+  --space-sm: #{map.get($spaces, 'sm')};
+  --space-md: #{map.get($spaces, 'md')};
+  --space-lg: #{map.get($spaces, 'lg')};
+  --space-xl: #{map.get($spaces, 'xl')};
+
+  --radius-sm: #{map.get($radii, 'sm')};
+  --radius-md: #{map.get($radii, 'md')};
+  --radius-pill: #{map.get($radii, 'pill')};
+
+  --border-thin: #{map.get($borders, 'thin')};
+  --border-thick: #{map.get($borders, 'thick')};
+  --border-focus: #{map.get($borders, 'focus')};
+
+  --layout-container: #{map.get($layout, 'container')};
+  --layout-header-height: #{map.get($layout, 'header-height')};
+  --layout-control: #{map.get($layout, 'control')};
+  --layout-label-column: #{map.get($layout, 'label-column')};
+}

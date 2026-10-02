@@ -1,3 +1,4 @@
-// Rôle : styles de base — éléments HTML sans classe
+// Rôle : styles de base (jetons sur :root, éléments HTML sans classe)
+@use 'tokens';
 @use 'reset';
 @use 'typography';

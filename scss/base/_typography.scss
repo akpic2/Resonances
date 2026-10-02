@@ -1,43 +1,40 @@
-// Rôle : typographie de base — police, tailles des titres, interlignage du texte courant
-// Valeurs relevées dans le cadre « 00 · Guide visuel » de la maquette.
-// Elles sont écrites en dur pour l'étape 1 et seront remplacées par des jetons à l'étape 2.
-// Les interlignes sont sans unité (taille de l'interligne ÷ taille de police)
-// pour que chaque élément garde un interlignage proportionné à sa propre taille.
-@use 'sass:math';
+// Rôle : typographie de base (police, titres, texte courant)
+// L'intro (20px) est une classe, donc hors de base/.
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: math.div(26, 16);   // 26px
-  color: #3A3950;                  // texte courant
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--color-text-body);
+  background-color: var(--color-background);
 }
 
 h1,
 h2,
 h3 {
-  color: #1C1B2E;                  // texte principal
+  color: var(--color-text);
 }
 
 h1 {
-  font-size: 56px;
-  font-weight: 800;
-  line-height: math.div(64, 56);   // 64px
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-display);
 }
 
 h2 {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: math.div(48, 40);   // 48px
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
 }
 
 h3 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: math.div(36, 28);   // 36px
+  font-size: var(--font-size-subheading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-subheading);
 }
 
 small {
-  font-size: 14px;
-  line-height: math.div(22, 14);   // 22px
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
 }

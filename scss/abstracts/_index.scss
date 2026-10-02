@@ -1,2 +1,3 @@
-// Rôle : outils Sass (variables, mixins, fonctions) — ne produit aucune règle CSS
-// Les partials seront ajoutés ici avec @forward (étape 2 : _variables.scss)
+// Rôle : outils Sass (variables, mixins, fonctions), aucune règle CSS
+// @forward pour transmettre les variables aux fichiers qui font @use '../abstracts'.
+@forward 'variables';

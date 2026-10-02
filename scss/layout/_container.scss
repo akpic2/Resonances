@@ -1,0 +1,8 @@
+// Rôle : conteneur centré de 1200px de contenu
+
+.l-container {
+  width: 100%;
+  max-width: calc(var(--layout-container) + 2 * var(--space-md));
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}

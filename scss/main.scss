@@ -1,10 +1,7 @@
-// Rôle : point d'entrée — charge les catégories dans l'ordre SMACSS
-// (abstracts n'est pas chargé ici : il ne produit aucune règle CSS,
-//  chaque partial qui en a besoin l'importe lui-même avec @use)
+// Rôle : point d'entrée, charge les catégories dans l'ordre SMACSS
+// abstracts n'est pas chargé ici : chaque partial l'importe lui-même.
 @use 'base';
 @use 'layout';
 @use 'modules';
 @use 'state';
 @use 'theme';
-
-

@@ -1,0 +1,94 @@
+// Rôle : jetons de conception, source unique des valeurs du guide visuel
+// Sass : calculs, media queries et boucles (compilation).
+// Propriétés personnalisées (base/_tokens) : cascade et thèmes (navigateur).
+// Les points de rupture restent en Sass : var() ne marche pas dans une media query.
+
+$colors: (
+  'text':           #1C1B2E,
+  'text-body':      #3A3950,
+  'text-muted':     #6B6A80,
+  'background':     #FFFFFF,
+  'background-alt': #F4F5F7,
+  'border':         #E3E5EA,
+  'border-field':   #CBD0D8,
+  'primary':        #C8402A,
+  'primary-hover':  #A3311F,
+  'accent':         #F4C95D,
+  'error':          #B3261E,
+  'focus-ring':     #F2B8AC,
+);
+
+$scenes: (
+  'lake':            #1F4E8C,
+  'lake-contrast':   #FFFFFF,
+  'forest':          #2F6B3A,
+  'forest-contrast': #FFFFFF,
+  'kiosk':           #B87A1E,
+  'kiosk-contrast':  #1C1B2E,
+);
+
+$font-family: ('Inter', system-ui, sans-serif);
+
+$font-weights: (
+  'regular': 400,
+  'bold':    700,
+  'black':   800,
+);
+
+$font-sizes: (
+  'display':    56px,
+  'heading':    40px,
+  'subheading': 28px,
+  'lead':       20px,
+  'body':       16px,
+  'label':      15px,
+  'small':      14px,
+  'caption':    13px,
+  'legend':     12px,
+);
+
+// Interlignes en px, convertis en coefficients dans base/_tokens
+$line-heights: (
+  'display':    64px,
+  'heading':    48px,
+  'subheading': 36px,
+  'lead':       32px,
+  'body':       26px,
+  'label':      18px,
+  'small':      22px,
+  'caption':    16px,
+  'legend':     15px,
+);
+
+$spaces: (
+  'xs': 8px,
+  'sm': 16px,
+  'md': 24px,
+  'lg': 40px,
+  'xl': 64px,
+);
+
+$radii: (
+  'sm':   6px,
+  'md':   12px,
+  'pill': 999px,
+);
+
+$borders: (
+  'thin':  1px,
+  'thick': 2px,
+  'focus': 3px,
+);
+
+$layout: (
+  'container':     1200px,
+  'header-height': 88px,
+  'control':       48px,
+  'label-column':  240px,
+);
+
+$breakpoints: (
+  'tablet':  768px,
+  'desktop': 1024px,
+  'wide':    1440px,
+);
