@@ -1,0 +1,16 @@
+{
+  "name": "resonances",
+  "version": "1.0.0",
+  "description": "Intégration du site du festival Résonances",
+  "scripts": {
+    "sass:build": "sass scss/main.scss css/style.css --no-source-map",
+    "sass:watch": "sass scss/main.scss css/style.css --no-source-map --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

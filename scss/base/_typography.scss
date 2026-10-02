@@ -1,0 +1,43 @@
+// Rôle : typographie de base — police, tailles des titres, interlignage du texte courant
+// Valeurs relevées dans le cadre « 00 · Guide visuel » de la maquette.
+// Elles sont écrites en dur pour l'étape 1 et seront remplacées par des jetons à l'étape 2.
+// Les interlignes sont sans unité (taille de l'interligne ÷ taille de police)
+// pour que chaque élément garde un interlignage proportionné à sa propre taille.
+@use 'sass:math';
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: math.div(26, 16);   // 26px
+  color: #3A3950;                  // texte courant
+}
+
+h1,
+h2,
+h3 {
+  color: #1C1B2E;                  // texte principal
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: math.div(64, 56);   // 64px
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: math.div(48, 40);   // 48px
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: math.div(36, 28);   // 36px
+}
+
+small {
+  font-size: 14px;
+  line-height: math.div(22, 14);   // 22px
+}
