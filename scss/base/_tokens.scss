@@ -1,5 +1,3 @@
-// Rôle : jetons exposés au navigateur en propriétés personnalisées sur :root
-// #{ } est obligatoire : sans lui, Sass recopie le nom de la variable au lieu de sa valeur.
 @use '../abstracts' as *;
 
 :root {

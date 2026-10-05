@@ -1,5 +1,3 @@
-// Rôle : point d'entrée, charge les catégories dans l'ordre SMACSS
-// abstracts n'est pas chargé ici : chaque partial l'importe lui-même.
 @use 'base';
 @use 'layout';
 @use 'modules';
