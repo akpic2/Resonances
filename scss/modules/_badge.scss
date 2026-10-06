@@ -1,0 +1,66 @@
+// Rôle : badge — étiquette pour une scène, un statut ou un nombre
+@use '../abstracts' as *;
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    height: $layout-badge;
+    padding: 0 $space-sm;
+    border-radius: $radius-pill;
+    font-size: $font-size-legend;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    white-space: nowrap;
+    color: $color-text;
+    background-color: $color-background-alt;
+
+    &--lake {
+        color: $scene-lake-contrast;
+        background-color: $scene-lake;
+    }
+
+    &--forest {
+        color: $scene-forest-contrast;
+        background-color: $scene-forest;
+    }
+
+    &--kiosk {
+        color: $scene-kiosk-contrast;
+        background-color: $scene-kiosk;
+    }
+
+    &--new {
+        color: $color-success;
+        background-color: $color-success-soft;
+    }
+
+    &--last-seats {
+        color: $color-warning;
+        background-color: $color-warning-soft;
+    }
+
+    &--sold-out {
+        color: $color-error;
+        background-color: $color-error-soft;
+    }
+
+    &--small {
+        height: $layout-badge;
+        font-size: $font-size-legend;
+    }
+
+    &--large {
+        height: $layout-badge-large;
+        font-size: $font-size-label;
+    }
+
+    &--outline {
+        border: $border-thick solid $scene-forest;
+        color: $scene-forest;
+        background-color: $color-background;
+    }
+
+    &--square {
+        border-radius: $radius-xs;
+    }
+}

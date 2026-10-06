@@ -1,8 +1,10 @@
+// Rôle : variables Sass — valeurs du guide visuel, nommées par rôle
 
 // Couleurs
 $color-text: #1C1B2E;
 $color-text-body: #3A3950;
 $color-text-muted: #6B6A80;
+$color-text-disabled: #9A9DA8;
 $color-background: #FFFFFF;
 $color-background-alt: #F4F5F7;
 $color-border: #E3E5EA;
@@ -10,8 +12,21 @@ $color-border-field: #CBD0D8;
 $color-primary: #C8402A;
 $color-primary-hover: #A3311F;
 $color-accent: #F4C95D;
-$color-error: #B3261E;
 $color-focus-ring: #F2B8AC;
+
+// Couleurs de statut (texte + fond clair)
+$color-success: #2F6B3A;
+$color-success-soft: #E3F1E6;
+$color-warning: #7A4F00;
+$color-warning-soft: #FDF1D6;
+$color-error: #B3261E;
+$color-error-soft: #FBE3E1;
+
+// Pied de page (fond sombre)
+$color-footer-text: #C9C7D6;
+$color-footer-muted: #8E8CA3;
+$color-footer-field: #2A2940;
+$color-footer-border: #4A4960;
 
 // Scènes (contrast = couleur du texte posé sur la scène)
 $scene-lake: #1F4E8C;
@@ -38,6 +53,13 @@ $font-size-small: 14px;
 $font-size-caption: 13px;
 $font-size-legend: 12px;
 
+// Tailles de titres de composants et prix
+$font-size-large: 18px;
+$font-size-title-sm: 17px;
+$font-size-title-md: 22px;
+$font-size-title-lg: 26px;
+$font-size-price: 36px;
+
 // Interlignes sans unité : interligne de la maquette ÷ taille de police
 $line-height-display: calc(64 / 56);
 $line-height-heading: calc(48 / 40);
@@ -48,15 +70,18 @@ $line-height-label: calc(18 / 15);
 $line-height-small: calc(22 / 14);
 $line-height-caption: calc(16 / 13);
 $line-height-legend: calc(15 / 12);
+$line-height-title: 1.25;
 
 // Espacements
 $space-xs: 8px;
 $space-sm: 16px;
+$space-card: 20px;
 $space-md: 24px;
 $space-lg: 40px;
 $space-xl: 64px;
 
 // Rayons
+$radius-xs: 4px;
 $radius-sm: 6px;
 $radius-md: 12px;
 $radius-pill: 999px;
@@ -65,12 +90,45 @@ $radius-pill: 999px;
 $border-thin: 1px;
 $border-thick: 2px;
 $border-focus: 3px;
+$border-logo: 3px;
+$border-strip: 6px;
+
+// Opacité
+$opacity-disabled: 0.4;
+
+// Durées
+$duration-spin: 800ms;
 
 // Mise en page
 $layout-container: 1200px;
 $layout-header-height: 88px;
-$layout-control: 48px;
 $layout-label-column: 240px;
+$layout-card-wide: 720px;
+$layout-column-small: 200px;
+$layout-column-medium: 260px;
+$layout-column-large: 300px;
+
+// Hauteurs des champs et boutons
+$layout-control-small: 36px;
+$layout-control-compact: 44px;
+$layout-control: 48px;
+$layout-control-large: 56px;
+
+// Tailles des petits éléments
+$layout-badge: 24px;
+$layout-badge-large: 32px;
+$layout-checkbox: 22px;
+$layout-circle: 40px;
+$layout-chevron: 10px;
+$layout-spinner: 18px;
+$layout-logo: 36px;
+$layout-logo-inner: 20px;
+
+// Images des cartes
+$layout-media: 200px;
+$layout-media-large: 280px;
+$layout-media-compact: 150px;
+$layout-media-side: 274px;
 
 // Points de rupture
 $breakpoint-tablet: 768px;

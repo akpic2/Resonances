@@ -1,9 +1,11 @@
+// Rôle : conteneur centré, largeur max de la maquette
+@use '../abstracts' as *;
 
 .l-container {
     width: 100%;
-    max-width: calc(var(--layout-container) + 2 * var(--space-md));
+    max-width: calc($layout-container + 2 * $space-md);
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
+    padding-left: $space-md;
+    padding-right: $space-md;
 }

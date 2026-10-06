@@ -1,2 +1,5 @@
+// Rôle : charge les zones de mise en page (conteneur, en-tête, pied de page, page des composants)
 @use 'container';
+@use 'header';
+@use 'footer';
 @use 'docs';

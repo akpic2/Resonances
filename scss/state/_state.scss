@@ -1,0 +1,38 @@
+// Rôle : états génériques réutilisables (les états propres à un composant sont dans son partial)
+@use '../abstracts' as *;
+
+.is-disabled {
+    opacity: $opacity-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.is-focused {
+    outline: none;
+    box-shadow: 0 0 0 $border-focus $color-focus-ring;
+}
+
+.is-loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: $layout-spinner;
+        height: $layout-spinner;
+        margin: auto;
+        border: $border-thick solid $color-background;
+        border-right-color: transparent;
+        border-radius: $radius-pill;
+        animation: spin $duration-spin linear infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

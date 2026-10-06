@@ -1,0 +1,76 @@
+// Rôle : en-tête du site (logo, navigation, actions)
+@use '../abstracts' as *;
+
+.l-header {
+    border-bottom: $border-thin solid $color-border;
+    background-color: $color-background;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-sm $space-lg;
+        min-height: $layout-header-height;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: $space-sm;
+        text-decoration: none;
+    }
+
+    &__mark {
+        position: relative;
+        width: $layout-logo;
+        height: $layout-logo;
+        border-radius: $radius-pill;
+        background-color: $color-primary;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            width: $layout-logo-inner;
+            height: $layout-logo-inner;
+            margin: auto;
+            border: $border-logo solid $color-background;
+            border-radius: $radius-pill;
+        }
+    }
+
+    &__name {
+        font-size: $font-size-lead;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-title;
+        color: $color-text;
+    }
+
+    &__tagline {
+        font-size: $font-size-legend;
+        line-height: $line-height-legend;
+        color: $color-text-muted;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-xs $space-lg;
+    }
+
+    &__link {
+        color: $color-text-muted;
+        text-decoration: none;
+
+        &:hover,
+        &.is-active {
+            color: $color-text;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        gap: $space-sm;
+    }
+}

@@ -10,6 +10,28 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="l-header">
+        <div class="l-container l-header__inner">
+            <a class="l-header__logo" href="index.html">
+                <span class="l-header__mark"></span>
+                <div>
+                    <p class="l-header__name">RÉSONANCES</p>
+                    <p class="l-header__tagline">Festival · 9 au 11 juillet 2027</p>
+                </div>
+            </a>
+            <nav class="l-header__nav" aria-label="Navigation principale">
+                <a class="l-header__link" href="index.html">Accueil</a>
+                <a class="l-header__link" href="programme.html">Programme</a>
+                <a class="l-header__link" href="billetterie.html">Billetterie</a>
+                <a class="l-header__link" href="infos.html">Infos pratiques</a>
+            </nav>
+            <div class="l-header__actions">
+                <button class="button button--outline" type="button" data-theme-toggle>Mode sombre</button>
+                <a class="button button--primary" href="billetterie.html">Réserver</a>
+            </div>
+        </div>
+    </header>
+
     <main class="l-docs">
 
         <header class="l-docs__intro">
@@ -22,8 +44,14 @@
 
         <div class="l-container">
 
-            <nav class="l-docs__toc" aria-label="Sommaire">
-                <a class="l-docs__toc-link" href="#jetons">Jetons</a>
+            <nav class="l-docs__nav" aria-label="Sommaire">
+                <a class="l-docs__link" href="#jetons">Jetons</a>
+                <a class="l-docs__link" href="#boutons">Boutons</a>
+                <a class="l-docs__link" href="#badges">Badges</a>
+                <a class="l-docs__link" href="#cartes">Cartes</a>
+                <a class="l-docs__link" href="#formulaires">Formulaires</a>
+                <a class="l-docs__link" href="#filtres">Filtres</a>
+                <a class="l-docs__link" href="#faq">Questions fréquentes</a>
             </nav>
 
             <section class="l-docs__section" id="jetons" aria-labelledby="jetons-titre">
@@ -33,53 +61,53 @@
                 <div class="l-docs__row">
                     <p class="l-docs__label">Couleurs</p>
                     <div class="l-docs__examples">
-                        <div class="l-docs__swatch l-docs__swatch--text">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Texte principal <span class="l-docs__swatch-value">#1C1B2E</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--text"></span>
+                            <p>Texte principal<br>#1C1B2E</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--text-body">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Texte courant <span class="l-docs__swatch-value">#3A3950</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--text-body"></span>
+                            <p>Texte courant<br>#3A3950</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--text-muted">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Texte secondaire <span class="l-docs__swatch-value">#6B6A80</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--text-muted"></span>
+                            <p>Texte secondaire<br>#6B6A80</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--background">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Fond de page <span class="l-docs__swatch-value">#FFFFFF</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--background"></span>
+                            <p>Fond de page<br>#FFFFFF</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--background-alt">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Fond alterné <span class="l-docs__swatch-value">#F4F5F7</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--background-alt"></span>
+                            <p>Fond alterné<br>#F4F5F7</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--border">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Bordures <span class="l-docs__swatch-value">#E3E5EA</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--border"></span>
+                            <p>Bordures<br>#E3E5EA</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--border-field">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Bordure de champ <span class="l-docs__swatch-value">#CBD0D8</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--border-field"></span>
+                            <p>Bordure de champ<br>#CBD0D8</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--primary">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Principale <span class="l-docs__swatch-value">#C8402A</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--primary"></span>
+                            <p>Principale<br>#C8402A</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--primary-hover">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Survol <span class="l-docs__swatch-value">#A3311F</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--primary-hover"></span>
+                            <p>Survol<br>#A3311F</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--accent">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Accent <span class="l-docs__swatch-value">#F4C95D</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--accent"></span>
+                            <p>Accent<br>#F4C95D</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--error">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Erreur <span class="l-docs__swatch-value">#B3261E</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--error"></span>
+                            <p>Erreur<br>#B3261E</p>
                         </div>
-                        <div class="l-docs__swatch l-docs__swatch--focus-ring">
-                            <span class="l-docs__swatch-color"></span>
-                            <p>Anneau de focus <span class="l-docs__swatch-value">#F2B8AC</span></p>
+                        <div class="l-docs__item">
+                            <span class="l-docs__dot l-docs__dot--focus-ring"></span>
+                            <p>Anneau de focus<br>#F2B8AC</p>
                         </div>
                     </div>
                 </div>
@@ -87,16 +115,16 @@
                 <div class="l-docs__row">
                     <p class="l-docs__label">Scènes</p>
                     <div class="l-docs__examples">
-                        <div class="l-docs__scene l-docs__scene--lake">
-                            <p class="l-docs__scene-color">Scène du Lac</p>
+                        <div class="l-docs__item">
+                            <p class="l-docs__scene l-docs__scene--lake">Scène du Lac</p>
                             <p>#1F4E8C</p>
                         </div>
-                        <div class="l-docs__scene l-docs__scene--forest">
-                            <p class="l-docs__scene-color">Scène de la Forêt</p>
+                        <div class="l-docs__item">
+                            <p class="l-docs__scene l-docs__scene--forest">Scène de la Forêt</p>
                             <p>#2F6B3A</p>
                         </div>
-                        <div class="l-docs__scene l-docs__scene--kiosk">
-                            <p class="l-docs__scene-color">Le Kiosque</p>
+                        <div class="l-docs__item">
+                            <p class="l-docs__scene l-docs__scene--kiosk">Le Kiosque</p>
                             <p>#B87A1E</p>
                         </div>
                     </div>
@@ -105,37 +133,411 @@
                 <div class="l-docs__row">
                     <p class="l-docs__label">Typographie</p>
                     <div class="l-docs__examples">
-                        <p class="l-docs__type l-docs__type--display">Titre 56</p>
-                        <p class="l-docs__type l-docs__type--heading">Titre 40</p>
-                        <p class="l-docs__type l-docs__type--subheading">Sous-titre 28</p>
-                        <p class="l-docs__type l-docs__type--lead">Introduction 20</p>
-                        <p class="l-docs__type l-docs__type--body">Courant 16</p>
-                        <p class="l-docs__type l-docs__type--small">Petit 14</p>
+                        <p class="l-docs__font l-docs__font--display">Titre 56</p>
+                        <p class="l-docs__font l-docs__font--heading">Titre 40</p>
+                        <p class="l-docs__font l-docs__font--subheading">Sous-titre 28</p>
+                        <p class="l-docs__font l-docs__font--lead">Introduction 20</p>
+                        <p class="l-docs__font l-docs__font--body">Courant 16</p>
+                        <p class="l-docs__font l-docs__font--small">Petit 14</p>
                     </div>
                 </div>
 
                 <div class="l-docs__row">
                     <p class="l-docs__label">Espacements</p>
                     <div class="l-docs__examples">
-                        <div class="l-docs__space l-docs__space--xs">
-                            <span class="l-docs__space-box"></span>
+                        <div class="l-docs__item">
+                            <span class="l-docs__square l-docs__square--xs"></span>
                             <p>8 px</p>
                         </div>
-                        <div class="l-docs__space l-docs__space--sm">
-                            <span class="l-docs__space-box"></span>
+                        <div class="l-docs__item">
+                            <span class="l-docs__square l-docs__square--sm"></span>
                             <p>16 px</p>
                         </div>
-                        <div class="l-docs__space l-docs__space--md">
-                            <span class="l-docs__space-box"></span>
+                        <div class="l-docs__item">
+                            <span class="l-docs__square l-docs__square--md"></span>
                             <p>24 px</p>
                         </div>
-                        <div class="l-docs__space l-docs__space--lg">
-                            <span class="l-docs__space-box"></span>
+                        <div class="l-docs__item">
+                            <span class="l-docs__square l-docs__square--lg"></span>
                             <p>40 px</p>
                         </div>
-                        <div class="l-docs__space l-docs__space--xl">
-                            <span class="l-docs__space-box"></span>
+                        <div class="l-docs__item">
+                            <span class="l-docs__square l-docs__square--xl"></span>
                             <p>64 px</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="l-docs__section" id="boutons" aria-labelledby="boutons-titre">
+                <h2 class="l-docs__section-title" id="boutons-titre">Boutons</h2>
+                <p class="l-docs__section-text">Un composant de base, des variantes de couleur et de taille, une icône facultative et des états.</p>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Bouton de base</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <button class="button button--primary" type="button">Réserver</button>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Couleurs</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <button class="button button--primary" type="button">Principal</button>
+                        <button class="button button--secondary" type="button">Secondaire</button>
+                        <button class="button button--outline" type="button">Contour</button>
+                        <div class="l-docs__dark">
+                            <button class="button button--ghost-light" type="button">Clair</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Tailles</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <button class="button button--primary button--small" type="button">Petit</button>
+                        <button class="button button--primary" type="button">Moyen</button>
+                        <button class="button button--primary button--large" type="button">Grand</button>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Avec icône</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <button class="button button--primary" type="button">
+                            <span class="button__icon" aria-hidden="true">+</span>
+                            Ajouter au programme
+                        </button>
+                        <button class="button button--secondary" type="button">
+                            <span class="button__icon" aria-hidden="true">★</span>
+                            Réserver
+                        </button>
+                        <button class="button button--outline button--icon-only" type="button" aria-label="Ajouter aux favoris">
+                            <span class="button__icon" aria-hidden="true">♡</span>
+                        </button>
+                        <button class="button button--outline button--small" type="button">
+                            Suivant
+                            <span class="button__icon" aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Combinaisons et états</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <div class="l-docs__item">
+                            <button class="button button--secondary button--large" type="button">Secondaire grand</button>
+                            <p>Combinaison</p>
+                        </div>
+                        <div class="l-docs__item">
+                            <button class="button button--primary is-hover" type="button">Survol</button>
+                            <p>Survol</p>
+                        </div>
+                        <div class="l-docs__item">
+                            <button class="button button--primary is-focused" type="button">Focus clavier</button>
+                            <p>Focus clavier</p>
+                        </div>
+                        <div class="l-docs__item">
+                            <button class="button button--primary is-disabled" type="button" disabled>Désactivé</button>
+                            <p>Désactivé</p>
+                        </div>
+                        <div class="l-docs__item">
+                            <button class="button button--primary is-loading" type="button">Chargement</button>
+                            <p>Chargement</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="l-docs__section" id="badges" aria-labelledby="badges-titre">
+                <h2 class="l-docs__section-title" id="badges-titre">Badges</h2>
+                <p class="l-docs__section-text">Pour signaler une scène, un statut ou un nombre.</p>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Badge de base</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <span class="badge">Badge</span>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Scènes</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <span class="badge badge--lake">Scène du Lac</span>
+                        <span class="badge badge--forest">Scène de la Forêt</span>
+                        <span class="badge badge--kiosk">Le Kiosque</span>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Statuts</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <span class="badge badge--new">Nouveau</span>
+                        <span class="badge badge--last-seats">Dernières places</span>
+                        <span class="badge badge--sold-out">Complet</span>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Tailles</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <span class="badge badge--lake badge--small">Petit</span>
+                        <span class="badge badge--lake badge--large">Grand</span>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Styles</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <span class="badge badge--forest">Plein arrondi</span>
+                        <span class="badge badge--outline">Contour</span>
+                        <span class="badge badge--kiosk badge--square">Angles droits</span>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Compteur</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <button class="button button--secondary" type="button">
+                            <span class="button__icon" aria-hidden="true">♡</span>
+                            Mon programme
+                            <span class="button__count">3</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="l-docs__section" id="cartes" aria-labelledby="cartes-titre">
+                <h2 class="l-docs__section-title" id="cartes-titre">Cartes</h2>
+                <p class="l-docs__section-text">La carte d’artiste, ses variantes, et les autres cartes du site.</p>
+
+                <div class="l-docs__block">
+                    <p class="l-docs__label">Carte de base</p>
+                    <div class="l-docs__grid l-docs__grid--large">
+                        <div class="card theme-lake">
+                            <img class="card__media" src="assets/img/maree-basse.jpg" alt="Marée Basse en concert">
+                            <div class="card__body">
+                                <span class="badge badge--lake">Scène du Lac</span>
+                                <h3 class="card__title">Marée Basse</h3>
+                                <p class="card__meta">Rock · Ven. 9 · 20 h 15</p>
+                                <a class="card__link" href="#">Voir la fiche →</a>
+                            </div>
+                        </div>
+                        <div class="card theme-kiosk">
+                            <div class="card__body">
+                                <span class="badge badge--kiosk">Le Kiosque</span>
+                                <h3 class="card__title">Clara Ninon Quartet</h3>
+                                <p class="card__meta">Jazz vocal · Ven. 9 · 18 h 30</p>
+                                <a class="card__link" href="#">Voir la fiche →</a>
+                            </div>
+                        </div>
+                        <div class="card theme-kiosk">
+                            <img class="card__media" src="assets/img/cordes-sensibles.jpg" alt="Cordes Sensibles et l’Ensemble du Kiosque en concert">
+                            <div class="card__body">
+                                <span class="badge badge--kiosk">Le Kiosque</span>
+                                <h3 class="card__title">Cordes Sensibles et l’Ensemble du Kiosque</h3>
+                                <p class="card__meta">Acoustique · Sam. 10 · 17 h 30</p>
+                            </div>
+                            <div class="card__actions">
+                                <a class="button button--secondary button--small" href="#">Voir la fiche</a>
+                                <button class="button button--outline button--small" type="button">
+                                    <span class="button__icon" aria-hidden="true">+</span>
+                                    Ajouter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="l-docs__caption">Avec image · sans image · titre sur deux lignes et pied avec actions</p>
+                </div>
+
+                <div class="l-docs__block">
+                    <p class="l-docs__label">Variantes</p>
+                    <div class="l-docs__grid l-docs__grid--variants">
+                        <div class="card card--headliner theme-lake">
+                            <img class="card__media" src="assets/img/lune-rousse.jpg" alt="Lune Rousse en concert">
+                            <div class="card__body">
+                                <span class="badge badge--lake">Scène du Lac</span>
+                                <h3 class="card__title">Lune Rousse</h3>
+                                <p class="card__meta">Pop · Ven. 9 · 22 h 30</p>
+                                <a class="card__link" href="#">Voir la fiche →</a>
+                            </div>
+                        </div>
+                        <div class="card card--compact theme-forest">
+                            <img class="card__media" src="assets/img/brume.jpg" alt="Brume en concert">
+                            <div class="card__body">
+                                <span class="badge badge--forest">Scène de la Forêt</span>
+                                <h3 class="card__title">Brume</h3>
+                                <p class="card__meta">House · Sam. 10 · 01 h 00</p>
+                                <a class="card__link" href="#">Voir la fiche →</a>
+                            </div>
+                        </div>
+                        <div class="card card--compact theme-forest">
+                            <img class="card__media" src="assets/img/sylve.jpg" alt="Sylve en concert">
+                            <div class="card__body">
+                                <span class="badge badge--forest">Scène de la Forêt</span>
+                                <h3 class="card__title">Sylve</h3>
+                                <p class="card__meta">Ambient · Dim. 11 · 20 h 00</p>
+                                <a class="card__link" href="#">Voir la fiche →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="l-docs__caption">Mise en avant (têtes d’affiche) · compacte (autres artistes)</p>
+                </div>
+
+                <div class="l-docs__block">
+                    <p class="l-docs__label">Horizontale</p>
+                    <div class="l-docs__grid l-docs__grid--single">
+                        <div class="card card--horizontal theme-forest">
+                            <img class="card__media" src="assets/img/vertige-808.jpg" alt="Vertige 808 en concert">
+                            <div class="card__body">
+                                <span class="badge badge--forest">Scène de la Forêt</span>
+                                <h3 class="card__title">Vertige 808</h3>
+                                <p class="card__meta">Techno · Ven. 9 · 23 h 30</p>
+                                <p class="card__text">Un set entre house et disco, pensé pour la clairière de la forêt.</p>
+                                <a class="card__link" href="#">Voir la fiche →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="l-docs__caption">Image à gauche, contenu à droite : écrans larges et résultats de recherche</p>
+                </div>
+
+                <div class="l-docs__block">
+                    <p class="l-docs__label">Autres cartes</p>
+                    <div class="l-docs__grid l-docs__grid--medium">
+                        <div class="pass">
+                            <h3 class="pass__title">Pass 1 jour</h3>
+                            <p class="pass__price">49 €</p>
+                            <ul class="pass__features">
+                                <li class="pass__feature">Accès aux trois scènes</li>
+                                <li class="pass__feature">Navette gratuite</li>
+                                <li class="pass__feature">Bracelet nominatif</li>
+                            </ul>
+                            <a class="button button--outline pass__action" href="#">Choisir</a>
+                        </div>
+                        <div class="pass pass--featured">
+                            <p class="pass__ribbon">Le plus choisi</p>
+                            <h3 class="pass__title">Pass 3 jours</h3>
+                            <p class="pass__price">119 €</p>
+                            <ul class="pass__features">
+                                <li class="pass__feature">Accès aux trois scènes</li>
+                                <li class="pass__feature">Navette gratuite</li>
+                                <li class="pass__feature">Accès prioritaire au Kiosque</li>
+                            </ul>
+                            <a class="button button--primary pass__action" href="#">Choisir</a>
+                        </div>
+                        <div class="scene-banner theme-lake">
+                            <h3 class="scene-banner__title">Scène du Lac</h3>
+                            <p class="scene-banner__genre">Pop et rock</p>
+                            <a class="scene-banner__link" href="#">Découvrir la scène →</a>
+                        </div>
+                        <div class="info-block">
+                            <span class="info-block__number">1</span>
+                            <h3 class="info-block__title">Accès</h3>
+                            <p class="info-block__text">En train : gare de Saint-Aulnes, puis navette gratuite.</p>
+                        </div>
+                    </div>
+                    <p class="l-docs__caption">Formules de pass (normale et mise en avant) · bandeau d’accès à une scène · bloc d’informations pratiques</p>
+                </div>
+            </section>
+
+            <section class="l-docs__section" id="formulaires" aria-labelledby="formulaires-titre">
+                <h2 class="l-docs__section-title" id="formulaires-titre">Formulaires</h2>
+                <p class="l-docs__section-text">Champ de saisie, liste déroulante et case à cocher, avec leurs états.</p>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Champ de saisie</p>
+                    <div class="l-docs__grid l-docs__grid--small">
+                        <div class="field">
+                            <label class="field__label" for="champ-nom">Nom</label>
+                            <input class="field__input" id="champ-nom" type="text" value="Durand">
+                            <p class="field__message">Texte d’aide</p>
+                        </div>
+                        <div class="field">
+                            <label class="field__label" for="champ-formule">Formule</label>
+                            <input class="field__input is-focused" id="champ-formule" type="text" value="Pass 3 jours">
+                            <p class="field__message">Focus</p>
+                        </div>
+                        <div class="field">
+                            <label class="field__label" for="champ-email">E-mail</label>
+                            <input class="field__input is-error" id="champ-email" type="email" value="camille.durand@">
+                            <p class="field__message field__message--error">Adresse e-mail invalide.</p>
+                        </div>
+                        <div class="field">
+                            <label class="field__label" for="champ-promo">Code promo</label>
+                            <input class="field__input" id="champ-promo" type="text" value="Indisponible" disabled>
+                            <p class="field__message">Désactivé</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Liste et case</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <div class="field">
+                            <label class="field__label" for="champ-pass">Nombre de pass</label>
+                            <select class="field__select" id="champ-pass">
+                                <option>1</option>
+                                <option selected>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" checked>
+                            <span class="checkbox__label">J’accepte les conditions générales</span>
+                        </label>
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox">
+                            <span class="checkbox__label">Recevoir la newsletter</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="l-docs__section" id="filtres" aria-labelledby="filtres-titre">
+                <h2 class="l-docs__section-title" id="filtres-titre">Filtres</h2>
+                <p class="l-docs__section-text">Groupe de boutons qui filtre le programme ; un seul filtre est sélectionné à la fois.</p>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Groupe de filtres</p>
+                    <div class="l-docs__examples l-docs__examples--center">
+                        <div class="filter" role="group" aria-label="Filtrer par scène">
+                            <button class="filter__button" type="button" data-filter="all">Toutes les scènes</button>
+                            <button class="filter__button is-active" type="button" data-filter="lake">Scène du Lac</button>
+                            <button class="filter__button" type="button" data-filter="forest">Scène de la Forêt</button>
+                            <button class="filter__button" type="button" data-filter="kiosk">Le Kiosque</button>
+                        </div>
+                        <p class="l-docs__caption">Normal · sélectionné (ici « Scène du Lac »)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="l-docs__section" id="faq" aria-labelledby="faq-titre">
+                <h2 class="l-docs__section-title" id="faq-titre">Questions fréquentes</h2>
+                <p class="l-docs__section-text">Accordéon : chaque question s’ouvre et se ferme indépendamment.</p>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Fermée</p>
+                    <div class="faq">
+                        <div class="faq__item">
+                            <button class="faq__question" type="button" aria-expanded="false" data-faq-toggle>
+                                Les enfants sont-ils acceptés ?
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <p class="faq__answer">Oui, les enfants sont les bienvenus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="l-docs__row">
+                    <p class="l-docs__label">Ouverte</p>
+                    <div class="faq">
+                        <div class="faq__item is-open">
+                            <button class="faq__question" type="button" aria-expanded="true" data-faq-toggle>
+                                Puis-je revendre mon pass ?
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                            <p class="faq__answer">Oui, via la plateforme officielle de revente, jusqu’à 48 heures avant le festival. Le pass est alors réédité au nom du nouvel acheteur.</p>
                         </div>
                     </div>
                 </div>
@@ -143,5 +545,32 @@
 
         </div>
     </main>
+
+    <footer class="l-footer">
+        <div class="l-container">
+            <div class="l-footer__grid">
+                <div class="l-footer__column">
+                    <p class="l-footer__brand">RÉSONANCES</p>
+                    <p>Festival de musique au bord du lac des Aulnes. Trois jours, trois scènes, une quarantaine d’artistes.</p>
+                </div>
+                <div class="l-footer__column">
+                    <p class="l-footer__title">Le festival</p>
+                    <a class="l-footer__link" href="programme.html">Programme</a>
+                    <a class="l-footer__link" href="billetterie.html">Billetterie</a>
+                    <a class="l-footer__link" href="infos.html">Infos pratiques</a>
+                </div>
+                <div class="l-footer__column">
+                    <p class="l-footer__title">Contact</p>
+                    <a class="l-footer__link" href="mailto:contact@resonances-festival.fr">contact@resonances-festival.fr</a>
+                    <p>04 00 00 00 00</p>
+                </div>
+                <div class="l-footer__column">
+                    <label class="l-footer__title" for="newsletter-email">Newsletter</label>
+                    <input class="l-footer__input" id="newsletter-email" type="email" placeholder="Votre e-mail">
+                </div>
+            </div>
+            <p class="l-footer__bottom">© 2027 Association Résonances · Mentions légales · Accessibilité · Crédits photos</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,118 @@
+// Rôle : carte d'artiste — image, corps, variantes, pied d'actions
+// La couleur de la scène vient de la classe de thème (theme-lake…)
+@use '../abstracts' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: $border-thin solid $color-border;
+    border-radius: $radius-md;
+    background-color: $color-background;
+
+    &__media {
+        width: 100%;
+        height: $layout-media;
+        object-fit: cover;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: flex-start;
+        gap: $space-xs;
+        padding: $space-card;
+        border-top: $border-strip solid var(--scene-color, $color-border);
+    }
+
+    &__title {
+        margin-top: $space-xs;
+        font-size: $font-size-lead;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-title;
+        color: $color-text;
+    }
+
+    &__meta {
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        color: $color-text-muted;
+    }
+
+    &__text {
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        color: $color-text-body;
+    }
+
+    &__link {
+        margin-top: $space-xs;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-small;
+        color: $color-primary;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        gap: $space-xs;
+        padding: $space-sm $space-card;
+        border-top: $border-thin solid $color-border;
+    }
+
+    &--headliner &__media {
+        height: $layout-media-large;
+    }
+
+    &--headliner &__title {
+        font-size: $font-size-title-lg;
+        text-transform: uppercase;
+    }
+
+    &--compact &__media {
+        height: $layout-media-compact;
+    }
+
+    &--compact &__body {
+        padding: $space-sm;
+    }
+
+    &--compact &__title {
+        font-size: $font-size-title-sm;
+    }
+
+    &--compact &__meta {
+        font-size: $font-size-caption;
+        line-height: $line-height-caption;
+    }
+
+    &--horizontal {
+        @media (min-width: $breakpoint-tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &--horizontal &__media {
+        @media (min-width: $breakpoint-tablet) {
+            width: $layout-media-side;
+            height: auto;
+        }
+    }
+
+    &--horizontal &__body {
+        @media (min-width: $breakpoint-tablet) {
+            border-top: 0;
+            border-left: $border-strip solid var(--scene-color, $color-border);
+        }
+    }
+
+    &--horizontal &__title {
+        font-size: $font-size-title-md;
+    }
+}

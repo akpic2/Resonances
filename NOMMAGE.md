@@ -1,380 +1,137 @@
 # Conventions de nommage — Festival Résonances
 
-Ce fichier fixe les règles de nommage des classes CSS du projet
-et recense tous les blocs avec leurs éléments, modificateurs et états.
-Il est mis à jour à chaque étape.
+Mis à jour à chaque étape.
 
-**Sommaire**
-1. [Règles générales](#1-règles-générales)
-2. [Préfixes par catégorie SMACSS](#2-préfixes-par-catégorie-smacss)
-3. [Comment lire les fiches](#3-comment-lire-les-fiches)
-4. [Mise en page (layout)](#4-mise-en-page-layout)
-5. [Composants (modules)](#5-composants-modules)
-6. [Thèmes](#6-thèmes)
-7. [Historique](#7-historique)
+## Règles
 
-<br>
+- Noms de classes en **anglais**, en minuscules, mots séparés par des tirets (`ghost-light`).
+- Syntaxe **BEM** : `.bloc`, `.bloc__element`, `.bloc--modificateur`.
+- Un composant ne dépend jamais de son contexte : une variation passe par un modificateur.
+- Le JavaScript cible uniquement des attributs `data-*`, jamais des classes.
 
----
-
-## 1. Règles générales
-
-### Langue
-- Les noms de classes sont en **anglais**, comme les calques de la maquette.
-- Tout en **minuscules**, mots séparés par des **tirets** : `ghost-light`, jamais `ghostLight`.
-
-### Syntaxe BEM
-
-| Rôle                   | Syntaxe                     | Exemple                |
-| ---------------------- | --------------------------- | ---------------------- |
-| Bloc                   | `.block`                    | `.card`                |
-| Élément                | `.block__element`           | `.card__title`         |
-| Modificateur           | `.block--modifier`          | `.card--headliner`     |
-| Modificateur d'élément | `.block__element--modifier` | `.filter__button--all` |
-
-### Principes
-- Un composant **ne dépend jamais de son contexte** : toute variation passe par un modificateur.
-- Le JavaScript cible uniquement des attributs **`data-*`** (ex. `data-filter`, `data-faq-toggle`), jamais des classes.
-
-<br>
-
----
-
-## 2. Préfixes par catégorie SMACSS
+## Préfixes
 
 | Catégorie    | Dossier    | Préfixe        | Exemple       |
 | ------------ | ---------- | -------------- | ------------- |
 | Mise en page | `layout/`  | `l-`           | `.l-header`   |
-| Modules      | `modules/` | *aucun*        | `.button`     |
+| Composants   | `modules/` | *aucun*        | `.button`     |
 | États        | `state/`   | `is-` / `has-` | `.is-active`  |
 | Thèmes       | `theme/`   | `theme-`       | `.theme-lake` |
 
-<br>
-
 ---
 
-## 3. Comment lire les fiches
-
-Chaque bloc (mise en page ou composant) est décrit par **une fiche identique** de six lignes.
-Une ligne sans objet contient « — ».
-
-| Ligne             | Contenu                                                    |
-| ----------------- | ---------------------------------------------------------- |
-| **Rôle**          | À quoi sert le bloc                                        |
-| **Pages**         | Pages de la maquette où il apparaît                        |
-| **Éléments**      | Parties du bloc (`__element`)                              |
-| **Modificateurs** | Variantes du bloc (`--modifier`), regroupées par type      |
-| **États**         | Pseudo-classes (`:hover`…) et classes d'état (`.is-…`)     |
-| **Thème**         | Si la couleur de scène est donnée par une classe `theme-*` |
-
-<br>
-
----
-
-## 4. Mise en page (layout)
-
-Grandes zones de la page : elles placent les composants mais n'en sont pas.
-
-| Bloc          | Pages                       |
-| ------------- | --------------------------- |
-| `l-container` | toutes                      |
-| `l-header`    | toutes                      |
-| `l-footer`    | toutes                      |
-| `l-grid`      | accueil, programme, artiste |
-| `l-docs`      | composants                  |
-
-<br>
+## Mise en page (layout)
 
 ### `l-container`
-
-|                   |                                                 |
-| ----------------- | ----------------------------------------------- |
-| **Rôle**          | Centre le contenu sur une largeur max de 1200px |
-| **Pages**         | toutes                                          |
-| **Éléments**      | —                                               |
-| **Modificateurs** | —                                               |
-| **États**         | —                                               |
-| **Thème**         | —                                               |
+Centre le contenu (1200px max).
 
 ### `l-header`
-
-|                   |                                         |
-| ----------------- | --------------------------------------- |
-| **Rôle**          | En-tête du site                         |
-| **Pages**         | toutes                                  |
-| **Éléments**      | `__logo`, `__nav`, `__actions`          |
-| **Modificateurs** | —                                       |
-| **États**         | lien de navigation actif : `.is-active` |
-| **Thème**         | —                                       |
+En-tête du site.
+- Éléments : `__inner`, `__logo`, `__mark`, `__name`, `__tagline`, `__nav`, `__link`, `__actions`
+- États : `.is-active` (lien de la page courante)
 
 ### `l-footer`
-
-|                   |                                                               |
-| ----------------- | ------------------------------------------------------------- |
-| **Rôle**          | Pied de page du site                                          |
-| **Pages**         | toutes                                                        |
-| **Éléments**      | `__about`, `__links`, `__contact`, `__newsletter`, `__bottom` |
-| **Modificateurs** | —                                                             |
-| **États**         | —                                                             |
-| **Thème**         | —                                                             |
-
-### `l-grid`
-
-|                   |                                                                       |
-| ----------------- | --------------------------------------------------------------------- |
-| **Rôle**          | Grille de cartes (programme par jour, têtes d'affiche, artistes liés) |
-| **Pages**         | accueil, programme, artiste                                           |
-| **Éléments**      | —                                                                     |
-| **Modificateurs** | —                                                                     |
-| **États**         | —                                                                     |
-| **Thème**         | —                                                                     |
+Pied de page.
+- Éléments : `__grid`, `__column`, `__brand`, `__title`, `__link`, `__input`, `__bottom`
 
 ### `l-docs`
-
-|                   |                                                                                                                         |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Rôle**          | Mise en forme de la page des composants                                                                                 |
-| **Pages**         | composants                                                                                                              |
-| **Éléments**      | intro : `__intro`, `__breadcrumb`, `__title`, `__lead`                                                                  |
-|                   | sommaire : `__toc`, `__toc-link`                                                                                        |
-|                   | sections : `__section`, `__section-title`, `__section-text`                                                             |
-|                   | lignes : `__row`, `__label`, `__examples`                                                                               |
-|                   | jetons : `__swatch`, `__swatch-color`, `__swatch-value`, `__scene`, `__scene-color`, `__type`, `__space`, `__space-box` |
-| **Modificateurs** | `__swatch--{couleur}` : un par jeton de couleur (`--primary`, `--error`…)                                               |
-|                   | `__scene--lake`, `__scene--forest`, `__scene--kiosk`                                                                    |
-|                   | `__type--display`, `--heading`, `--subheading`, `--lead`, `--body`, `--small`                                           |
-|                   | `__space--xs`, `--sm`, `--md`, `--lg`, `--xl`                                                                           |
-| **États**         | `:hover` sur `__toc-link`                                                                                               |
-| **Thème**         | —                                                                                                                       |
-
-<br>
+Page des composants (composants.html).
+- Éléments :
+  - `__intro`, `__breadcrumb`, `__title`, `__lead`
+  - `__nav`, `__link`
+  - `__section`, `__section-title`, `__section-text`
+  - `__row`, `__label`, `__examples`, `__block`, `__caption`
+  - `__grid`, `__item`, `__dark`
+  - `__dot`, `__scene`, `__font`, `__square`
+- Modificateurs :
+  - `__examples--center`
+  - `__grid--small`, `--medium`, `--large`, `--variants`, `--single`
+  - `__dot--{couleur}` (un par couleur : `--primary`, `--error`…)
+  - `__scene--lake`, `--forest`, `--kiosk`
+  - `__font--display`, `--heading`, `--subheading`, `--lead`, `--body`, `--small`
+  - `__square--xs`, `--sm`, `--md`, `--lg`, `--xl`
 
 ---
 
-## 5. Composants (modules)
-
-14 composants, regroupés par famille.
-
-| Famille     | Bloc           | Pages                                     |
-| ----------- | -------------- | ----------------------------------------- |
-| Actions     | `button`       | toutes                                    |
-| Actions     | `filter`       | programme                                 |
-| Étiquettes  | `badge`        | accueil, programme, artiste               |
-| Contenus    | `card`         | accueil, programme, artiste               |
-| Contenus    | `pass`         | billetterie                               |
-| Contenus    | `stat`         | accueil                                   |
-| Contenus    | `info-block`   | infos                                     |
-| Contenus    | `artist`       | artiste                                   |
-| Bandeaux    | `hero`         | accueil                                   |
-| Bandeaux    | `page-title`   | programme, billetterie, infos, composants |
-| Bandeaux    | `scene-banner` | accueil, artiste                          |
-| Formulaires | `field`        | billetterie                               |
-| Formulaires | `checkbox`     | billetterie                               |
-| Interaction | `faq`          | infos                                     |
-
-<br>
-
-### 5.1 Actions
+## Composants (modules)
 
 ### `button`
-
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| **Rôle**          | Bouton ou lien d'action                                             |
-| **Pages**         | toutes                                                              |
-| **Éléments**      | `__icon`, `__count`                                                 |
-| **Modificateurs** | couleurs : `--primary`, `--secondary`, `--outline`, `--ghost-light` |
-|                   | tailles : `--small`, `--large`                                      |
-|                   | forme : `--icon-only`                                               |
-| **États**         | `:hover`, `:focus-visible`, `.is-disabled`, `.is-loading`           |
-| **Thème**         | oui : bouton principal de la fiche artiste aux couleurs de la scène |
-
-### `filter`
-
-|                   |                                                     |
-| ----------------- | --------------------------------------------------- |
-| **Rôle**          | Groupe de boutons qui filtre le programme par scène |
-| **Pages**         | programme                                           |
-| **Éléments**      | `__button`                                          |
-| **Modificateurs** | —                                                   |
-| **États**         | `.is-active` (un seul filtre sélectionné à la fois) |
-| **Thème**         | —                                                   |
-
-<br>
-
-### 5.2 Étiquettes
+Bouton ou lien d'action.
+- Éléments : `__icon`, `__count`
+- Modificateurs :
+  - couleurs : `--primary`, `--secondary`, `--outline`, `--ghost-light`
+  - tailles : `--small`, `--large`
+  - forme : `--icon-only`
+- États : `:hover` (ou `.is-hover`), `:focus-visible` (ou `.is-focused`), `.is-disabled`, `.is-loading`
 
 ### `badge`
-
-|                   |                                                 |
-| ----------------- | ----------------------------------------------- |
-| **Rôle**          | Petite étiquette : scène, statut ou nombre      |
-| **Pages**         | accueil, programme, artiste                     |
-| **Éléments**      | —                                               |
-| **Modificateurs** | scènes : `--lake`, `--forest`, `--kiosk`        |
-|                   | statuts : `--new`, `--last-seats`, `--sold-out` |
-|                   | tailles : `--small`, `--large`                  |
-|                   | styles : `--outline`, `--square`                |
-| **États**         | —                                               |
-| **Thème**         | — (la scène est donnée par le modificateur)     |
-
-<br>
-
-### 5.3 Contenus
+Étiquette : scène, statut ou nombre.
+- Modificateurs :
+  - scènes : `--lake`, `--forest`, `--kiosk`
+  - statuts : `--new`, `--last-seats`, `--sold-out`
+  - tailles : `--small`, `--large`
+  - styles : `--outline`, `--square`
 
 ### `card`
-
-|                   |                                                                           |
-| ----------------- | ------------------------------------------------------------------------- |
-| **Rôle**          | Carte d'artiste                                                           |
-| **Pages**         | accueil, programme, artiste                                               |
-| **Éléments**      | `__media`, `__body`, `__title`, `__meta`, `__text`, `__link`, `__actions` |
-| **Modificateurs** | variantes : `--headliner`, `--compact`, `--horizontal`, `--no-media`      |
-| **États**         | `:hover`                                                                  |
-| **Thème**         | oui : liseré et badge aux couleurs de la scène                            |
+Carte d'artiste (la couleur de scène vient d'une classe `theme-*`).
+- Éléments : `__media`, `__body`, `__title`, `__meta`, `__text`, `__link`, `__actions`
+- Modificateurs : `--headliner`, `--compact`, `--horizontal`
 
 ### `pass`
-
-|                   |                                                                         |
-| ----------------- | ----------------------------------------------------------------------- |
-| **Rôle**          | Formule de pass de la billetterie                                       |
-| **Pages**         | billetterie                                                             |
-| **Éléments**      | `__ribbon`, `__title`, `__price`, `__features`, `__feature`, `__action` |
-| **Modificateurs** | variantes : `--featured`                                                |
-| **États**         | —                                                                       |
-| **Thème**         | —                                                                       |
-
-### `stat`
-
-|                   |                         |
-| ----------------- | ----------------------- |
-| **Rôle**          | Chiffre clé du festival |
-| **Pages**         | accueil                 |
-| **Éléments**      | `__value`, `__label`    |
-| **Modificateurs** | —                       |
-| **États**         | —                       |
-| **Thème**         | —                       |
-
-### `info-block`
-
-|                   |                                                |
-| ----------------- | ---------------------------------------------- |
-| **Rôle**          | Bloc d'information numéroté (accès, horaires…) |
-| **Pages**         | infos                                          |
-| **Éléments**      | `__number`, `__title`, `__text`                |
-| **Modificateurs** | —                                              |
-| **États**         | —                                              |
-| **Thème**         | —                                              |
-
-### `artist`
-
-|                   |                                        |
-| ----------------- | -------------------------------------- |
-| **Rôle**          | Présentation d'un artiste sur sa fiche |
-| **Pages**         | artiste                                |
-| **Éléments**      | `__media`, `__infos`, `__bio`          |
-| **Modificateurs** | —                                      |
-| **États**         | —                                      |
-| **Thème**         | —                                      |
-
-<br>
-
-### 5.4 Bandeaux
-
-### `hero`
-
-|                   |                                                                       |
-| ----------------- | --------------------------------------------------------------------- |
-| **Rôle**          | Grande bannière d'accueil avec photo                                  |
-| **Pages**         | accueil                                                               |
-| **Éléments**      | `__media`, `__content`, `__eyebrow`, `__title`, `__text`, `__actions` |
-| **Modificateurs** | —                                                                     |
-| **États**         | —                                                                     |
-| **Thème**         | —                                                                     |
-
-### `page-title`
-
-|                   |                                                |
-| ----------------- | ---------------------------------------------- |
-| **Rôle**          | Bandeau de titre en haut des pages intérieures |
-| **Pages**         | programme, billetterie, infos, composants      |
-| **Éléments**      | `__breadcrumb`, `__title`, `__text`            |
-| **Modificateurs** | —                                              |
-| **États**         | —                                              |
-| **Thème**         | —                                              |
+Formule de pass de la billetterie.
+- Éléments : `__ribbon`, `__title`, `__price`, `__features`, `__feature`, `__action`
+- Modificateurs : `--featured`
 
 ### `scene-banner`
+Bandeau d'accès à une scène (classe `theme-*`).
+- Éléments : `__title`, `__genre`, `__link`
 
-|                   |                                     |
-| ----------------- | ----------------------------------- |
-| **Rôle**          | Bandeau d'accès à une scène         |
-| **Pages**         | accueil, artiste                    |
-| **Éléments**      | `__title`, `__genre`, `__link`      |
-| **Modificateurs** | —                                   |
-| **États**         | —                                   |
-| **Thème**         | oui : fond aux couleurs de la scène |
-
-<br>
-
-### 5.5 Formulaires
+### `info-block`
+Bloc d'information numéroté.
+- Éléments : `__number`, `__title`, `__text`
 
 ### `field`
-
-|                   |                                                     |
-| ----------------- | --------------------------------------------------- |
-| **Rôle**          | Champ de formulaire avec son libellé et son message |
-| **Pages**         | billetterie                                         |
-| **Éléments**      | `__label`, `__input`, `__select`, `__message`       |
-| **Modificateurs** | —                                                   |
-| **États**         | `.is-focused`, `.is-error`, `.is-disabled`          |
-| **Thème**         | —                                                   |
+Champ de formulaire.
+- Éléments : `__label`, `__input`, `__select`, `__message`
+- Modificateurs : `__message--error`
+- États : `:focus` (ou `.is-focused`), `.is-error`, `:disabled`
 
 ### `checkbox`
+Case à cocher.
+- Éléments : `__input`, `__label`
+- États : `:checked`
 
-|                   |                                |
-| ----------------- | ------------------------------ |
-| **Rôle**          | Case à cocher avec son libellé |
-| **Pages**         | billetterie                    |
-| **Éléments**      | `__input`, `__label`           |
-| **Modificateurs** | —                              |
-| **États**         | `:checked`                     |
-| **Thème**         | —                              |
-
-<br>
-
-### 5.6 Interaction
+### `filter`
+Filtre le programme par scène.
+- Éléments : `__button`
+- États : `.is-active` (un seul à la fois)
 
 ### `faq`
+Questions fréquentes (accordéon).
+- Éléments : `__item`, `__question`, `__icon`, `__answer`
+- États : `.is-open` sur `__item`
 
-|                   |                                                     |
-| ----------------- | --------------------------------------------------- |
-| **Rôle**          | Liste de questions fréquentes en accordéon          |
-| **Pages**         | infos                                               |
-| **Éléments**      | `__item`, `__question`, `__answer`, `__icon`        |
-| **Modificateurs** | —                                                   |
-| **États**         | `.is-open` (chaque question s'ouvre indépendamment) |
-| **Thème**         | —                                                   |
-
-<br>
+### À venir
+`hero`, `page-title`, `stat`, `artist` (étape 7, assemblage des pages).
 
 ---
 
-## 6. Thèmes
+## États
 
-| Classe         | Scène                 | Couleur   | Texte posé dessus |
-| -------------- | --------------------- | --------- | ----------------- |
-| `theme-lake`   | Scène du Lac          | `#1F4E8C` | `#FFFFFF`         |
-| `theme-forest` | Scène de la Forêt     | `#2F6B3A` | `#FFFFFF`         |
-| `theme-kiosk`  | Le Kiosque            | `#B87A1E` | `#1C1B2E`         |
-| `theme-dark`   | Mode sombre (étape 8) | —         | —                 |
+- Génériques (dans `state/`) : `.is-disabled`, `.is-focused`, `.is-loading`
+- Propres à un composant (dans son partial) : `.is-hover`, `.is-active`, `.is-open`, `.is-error`
 
-<br>
+## Thèmes
 
----
+- `theme-lake` : Scène du Lac
+- `theme-forest` : Scène de la Forêt
+- `theme-kiosk` : Le Kiosque
+- `theme-dark` : mode sombre (étape 8)
 
-## 7. Historique
+Un thème de scène définit `--scene-color` et `--scene-contrast` pour le bloc qui le porte.
 
-| Étape | Modification                                                                                             |
-| ----- | -------------------------------------------------------------------------------------------------------- |
-| 1     | Création des conventions et de l'inventaire (14 composants)                                              |
-| 2     | Jetons (`abstracts/_variables.scss`, `base/_tokens.scss`), page des composants (`l-docs`, `l-container`) |
+## Historique
+
+- Étape 1 : conventions et inventaire
+- Étape 2 : jetons en variables Sass, page des composants (`l-docs`), noms simplifiés
+- Page des composants complétée : boutons, badges, cartes, formulaires, filtres, FAQ, en-tête et pied de page

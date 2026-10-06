@@ -1,0 +1,92 @@
+// Rôle : formule de pass de la billetterie (normale ou mise en avant)
+@use '../abstracts' as *;
+
+.pass {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    padding: $space-md;
+    border: $border-thin solid $color-border;
+    border-radius: $radius-md;
+    background-color: $color-background;
+
+    &__ribbon {
+        position: absolute;
+        top: -$space-sm;
+        left: $space-card;
+        padding: $space-xs $space-sm;
+        border-radius: $radius-pill;
+        font-size: $font-size-legend;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        color: $color-text;
+        background-color: $color-accent;
+    }
+
+    &__title {
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-title;
+        color: $color-text;
+    }
+
+    &__price {
+        font-size: $font-size-price;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-title;
+        color: $color-primary;
+    }
+
+    &__features {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: $space-sm;
+        padding-top: $space-sm;
+        border-top: $border-thin solid $color-border;
+        list-style: none;
+    }
+
+    &__feature {
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        color: $color-text-body;
+
+        &::before {
+            content: '✓';
+            margin-right: $space-xs;
+            font-weight: $font-weight-bold;
+            color: $color-success;
+        }
+    }
+
+    &__action {
+        margin-top: $space-sm;
+    }
+
+    &--featured {
+        border-color: $color-text;
+        background-color: $color-text;
+    }
+
+    &--featured &__title {
+        color: $color-background;
+    }
+
+    &--featured &__price {
+        color: $color-accent;
+    }
+
+    &--featured &__features {
+        border-top-color: $color-text-body;
+    }
+
+    &--featured &__feature {
+        color: $color-background;
+
+        &::before {
+            color: $color-accent;
+        }
+    }
+}
