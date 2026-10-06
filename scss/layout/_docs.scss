@@ -1,47 +1,48 @@
+// Rôle : mise en page de composants.html (documentation des composants)
 @use '../abstracts' as *;
 
 .l-docs {
-    padding-bottom: var(--space-xl);
+    padding-bottom: $space-xl;
 
     &__intro {
-        padding-top: var(--space-lg);
-        padding-bottom: var(--space-lg);
-        background-color: var(--color-background-alt);
+        padding-top: $space-lg;
+        padding-bottom: $space-lg;
+        background-color: $color-background-alt;
     }
 
     &__breadcrumb {
-        margin-bottom: var(--space-sm);
-        font-size: var(--font-size-small);
-        line-height: var(--line-height-small);
-        color: var(--color-text-muted);
+        margin-bottom: $space-sm;
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        color: $color-text-muted;
     }
 
     &__title {
-        font-size: var(--font-size-heading);
-        font-weight: var(--font-weight-bold);
-        line-height: var(--line-height-heading);
+        font-size: $font-size-heading;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
     }
 
     &__lead {
-        margin-top: var(--space-sm);
-        font-size: var(--font-size-lead);
-        line-height: var(--line-height-lead);
+        margin-top: $space-sm;
+        font-size: $font-size-lead;
+        line-height: $line-height-lead;
     }
 
-    &__toc {
+    &__nav {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--space-xs) var(--space-lg);
-        margin-top: var(--space-lg);
-        padding-bottom: var(--space-md);
-        border-bottom: var(--border-thin) solid var(--color-border);
+        gap: $space-xs $space-lg;
+        margin-top: $space-lg;
+        padding-bottom: $space-md;
+        border-bottom: $border-thin solid $color-border;
     }
 
-    &__toc-link {
-        font-size: var(--font-size-label);
-        font-weight: var(--font-weight-bold);
-        line-height: var(--line-height-label);
-        color: var(--color-primary);
+    &__link {
+        font-size: $font-size-label;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-label;
+        color: $color-primary;
         text-decoration: none;
 
         &:hover {
@@ -50,176 +51,205 @@
     }
 
     &__section {
-        margin-top: var(--space-xl);
+        margin-top: $space-xl;
     }
 
     &__section-title {
-        padding-bottom: var(--space-sm);
-        border-bottom: var(--border-thick) solid var(--color-primary);
-        font-size: var(--font-size-subheading);
-        line-height: var(--line-height-subheading);
+        padding-bottom: $space-sm;
+        border-bottom: $border-thick solid $color-primary;
+        font-size: $font-size-subheading;
+        line-height: $line-height-subheading;
     }
 
     &__section-text {
-        margin-top: var(--space-sm);
-        color: var(--color-text-muted);
+        margin-top: $space-sm;
+        color: $color-text-muted;
     }
 
     &__row {
         display: grid;
-        gap: var(--space-sm);
+        gap: $space-sm;
         align-items: center;
-        margin-top: var(--space-lg);
+        margin-top: $space-lg;
 
         @media (min-width: $breakpoint-tablet) {
-            grid-template-columns: var(--layout-label-column) 1fr;
+            grid-template-columns: $layout-label-column 1fr;
         }
     }
 
     &__label {
-        font-size: var(--font-size-label);
-        font-weight: var(--font-weight-bold);
-        line-height: var(--line-height-label);
-        color: var(--color-text);
+        font-size: $font-size-label;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-label;
+        color: $color-text;
     }
 
     &__examples {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
-        gap: var(--space-md) var(--space-lg);
+        gap: $space-md $space-lg;
+
+        &--center {
+            align-items: center;
+        }
     }
 
-    // Nuancier : chaque modificateur redéfinit --swatch-color
-    &__swatch {
+    // Exemples en grille : le nombre de colonnes dépend de la largeur de l'écran
+    &__grid {
+        display: grid;
+        gap: $space-md;
+        align-items: start;
+
+        &--small {
+            grid-template-columns: repeat(auto-fit, minmax($layout-column-small, 1fr));
+        }
+
+        &--medium {
+            grid-template-columns: repeat(auto-fit, minmax($layout-column-medium, 1fr));
+        }
+
+        &--large {
+            grid-template-columns: repeat(auto-fit, minmax($layout-column-large, 1fr));
+        }
+
+        &--variants {
+            @media (min-width: $breakpoint-desktop) {
+                grid-template-columns: 3fr 2fr 2fr;
+            }
+        }
+
+        &--single {
+            grid-template-columns: minmax(0, $layout-card-wide);
+        }
+    }
+
+    // Libellé au-dessus de ses exemples (au lieu d'être à gauche)
+    &__block {
         display: flex;
         flex-direction: column;
-        gap: var(--space-xs);
-        font-size: var(--font-size-legend);
-        line-height: var(--line-height-legend);
-        color: var(--color-text-muted);
+        gap: $space-md;
+        margin-top: $space-lg;
     }
 
-    &__swatch-color {
-        width: var(--layout-control);
-        height: var(--layout-control);
-        border: var(--border-thin) solid var(--color-border);
-        border-radius: var(--radius-pill);
-        background-color: var(--swatch-color);
+    &__caption {
+        font-size: $font-size-legend;
+        line-height: $line-height-legend;
+        color: $color-text-muted;
     }
 
-    &__swatch-value {
-        display: block;
+    // Fond sombre pour montrer un bouton clair
+    &__dark {
+        padding: $space-sm $space-lg;
+        border-radius: $radius-sm;
+        background-color: $color-text;
     }
 
-    &__swatch--text { --swatch-color: var(--color-text); }
-    &__swatch--text-body { --swatch-color: var(--color-text-body); }
-    &__swatch--text-muted { --swatch-color: var(--color-text-muted); }
-    &__swatch--background { --swatch-color: var(--color-background); }
-    &__swatch--background-alt { --swatch-color: var(--color-background-alt); }
-    &__swatch--border { --swatch-color: var(--color-border); }
-    &__swatch--border-field { --swatch-color: var(--color-border-field); }
-    &__swatch--primary { --swatch-color: var(--color-primary); }
-    &__swatch--primary-hover { --swatch-color: var(--color-primary-hover); }
-    &__swatch--accent { --swatch-color: var(--color-accent); }
-    &__swatch--error { --swatch-color: var(--color-error); }
-    &__swatch--focus-ring { --swatch-color: var(--color-focus-ring); }
+    // Un exemple avec sa légende (couleur, scène ou espacement)
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $space-xs;
+        font-size: $font-size-legend;
+        line-height: $line-height-legend;
+        color: $color-text-muted;
+    }
 
-    // Scènes : chaque modificateur redéfinit --scene-color et --scene-contrast
+    // Pastille d'une couleur
+    &__dot {
+        width: $layout-control;
+        height: $layout-control;
+        border: $border-thin solid $color-border;
+        border-radius: $radius-pill;
+
+        &--text { background-color: $color-text; }
+        &--text-body { background-color: $color-text-body; }
+        &--text-muted { background-color: $color-text-muted; }
+        &--background { background-color: $color-background; }
+        &--background-alt { background-color: $color-background-alt; }
+        &--border { background-color: $color-border; }
+        &--border-field { background-color: $color-border-field; }
+        &--primary { background-color: $color-primary; }
+        &--primary-hover { background-color: $color-primary-hover; }
+        &--accent { background-color: $color-accent; }
+        &--error { background-color: $color-error; }
+        &--focus-ring { background-color: $color-focus-ring; }
+    }
+
+    // Rectangle aux couleurs d'une scène
     &__scene {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-xs);
-        font-size: var(--font-size-legend);
-        line-height: var(--line-height-legend);
-        color: var(--color-text-muted);
+        padding: $space-sm;
+        border-radius: $radius-sm;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-small;
+
+        &--lake {
+            color: $scene-lake-contrast;
+            background-color: $scene-lake;
+        }
+
+        &--forest {
+            color: $scene-forest-contrast;
+            background-color: $scene-forest;
+        }
+
+        &--kiosk {
+            color: $scene-kiosk-contrast;
+            background-color: $scene-kiosk;
+        }
     }
 
-    &__scene-color {
-        padding: var(--space-sm);
-        border-radius: var(--radius-sm);
-        font-size: var(--font-size-small);
-        font-weight: var(--font-weight-bold);
-        line-height: var(--line-height-small);
-        color: var(--scene-contrast);
-        background-color: var(--scene-color);
+    // Exemple de texte de l'échelle typographique
+    &__font {
+        color: $color-text;
+
+        &--display {
+            font-size: $font-size-display;
+            font-weight: $font-weight-black;
+            line-height: $line-height-display;
+        }
+
+        &--heading {
+            font-size: $font-size-heading;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-heading;
+        }
+
+        &--subheading {
+            font-size: $font-size-subheading;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-subheading;
+        }
+
+        &--lead {
+            font-size: $font-size-lead;
+            line-height: $line-height-lead;
+            color: $color-text-body;
+        }
+
+        &--body {
+            font-size: $font-size-body;
+            line-height: $line-height-body;
+            color: $color-text-body;
+        }
+
+        &--small {
+            font-size: $font-size-small;
+            line-height: $line-height-small;
+            color: $color-text-muted;
+        }
     }
 
-    &__scene--lake {
-        --scene-color: var(--scene-lake);
-        --scene-contrast: var(--scene-lake-contrast);
-    }
+    // Carré d'une valeur de l'échelle d'espacements
+    &__square {
+        background-color: $color-primary;
 
-    &__scene--forest {
-        --scene-color: var(--scene-forest);
-        --scene-contrast: var(--scene-forest-contrast);
+        &--xs { width: $space-xs; height: $space-xs; }
+        &--sm { width: $space-sm; height: $space-sm; }
+        &--md { width: $space-md; height: $space-md; }
+        &--lg { width: $space-lg; height: $space-lg; }
+        &--xl { width: $space-xl; height: $space-xl; }
     }
-
-    &__scene--kiosk {
-        --scene-color: var(--scene-kiosk);
-        --scene-contrast: var(--scene-kiosk-contrast);
-    }
-
-    // Échelle typographique
-    &__type {
-        color: var(--color-text);
-    }
-
-    &__type--display {
-        font-size: var(--font-size-display);
-        font-weight: var(--font-weight-black);
-        line-height: var(--line-height-display);
-    }
-
-    &__type--heading {
-        font-size: var(--font-size-heading);
-        font-weight: var(--font-weight-bold);
-        line-height: var(--line-height-heading);
-    }
-
-    &__type--subheading {
-        font-size: var(--font-size-subheading);
-        font-weight: var(--font-weight-bold);
-        line-height: var(--line-height-subheading);
-    }
-
-    &__type--lead {
-        font-size: var(--font-size-lead);
-        line-height: var(--line-height-lead);
-        color: var(--color-text-body);
-    }
-
-    &__type--body {
-        font-size: var(--font-size-body);
-        line-height: var(--line-height-body);
-        color: var(--color-text-body);
-    }
-
-    &__type--small {
-        font-size: var(--font-size-small);
-        line-height: var(--line-height-small);
-        color: var(--color-text-muted);
-    }
-
-    // Espacements : chaque modificateur redéfinit --space-size
-    &__space {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-xs);
-        font-size: var(--font-size-legend);
-        line-height: var(--line-height-legend);
-        color: var(--color-text-muted);
-    }
-
-    &__space-box {
-        width: var(--space-size);
-        height: var(--space-size);
-        background-color: var(--color-primary);
-    }
-
-    &__space--xs { --space-size: var(--space-xs); }
-    &__space--sm { --space-size: var(--space-sm); }
-    &__space--md { --space-size: var(--space-md); }
-    &__space--lg { --space-size: var(--space-lg); }
-    &__space--xl { --space-size: var(--space-xl); }
 }

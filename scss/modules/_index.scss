@@ -1,1 +1,11 @@
-// Rôle : composants réutilisables — un partial par composant (BEM)
+// Rôle : charge les composants réutilisables, un partial par composant (BEM)
+@use 'button';
+@use 'badge';
+@use 'card';
+@use 'pass';
+@use 'scene-banner';
+@use 'info-block';
+@use 'field';
+@use 'checkbox';
+@use 'filter';
+@use 'faq';

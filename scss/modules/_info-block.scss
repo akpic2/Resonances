@@ -1,0 +1,40 @@
+// Rôle : bloc d'information numéroté (accès, horaires…)
+@use '../abstracts' as *;
+
+.info-block {
+    display: grid;
+    grid-template-columns: $layout-circle 1fr;
+    gap: $space-sm;
+    align-items: center;
+    padding: $space-md;
+    border: $border-thin solid $color-border;
+    border-radius: $radius-md;
+    background-color: $color-background;
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $layout-circle;
+        height: $layout-circle;
+        border-radius: $radius-pill;
+        font-size: $font-size-label;
+        font-weight: $font-weight-bold;
+        color: $color-primary;
+        background-color: $color-background-alt;
+    }
+
+    &__title {
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-title;
+        color: $color-text;
+    }
+
+    &__text {
+        grid-column: 1 / -1;
+        font-size: $font-size-caption;
+        line-height: $line-height-caption;
+        color: $color-text-body;
+    }
+}

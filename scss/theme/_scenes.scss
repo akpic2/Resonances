@@ -1,0 +1,17 @@
+// Rôle : thèmes des scènes — définissent --scene-color et --scene-contrast pour le bloc qui porte la classe
+@use '../abstracts' as *;
+
+.theme-lake {
+    --scene-color: #{$scene-lake};
+    --scene-contrast: #{$scene-lake-contrast};
+}
+
+.theme-forest {
+    --scene-color: #{$scene-forest};
+    --scene-contrast: #{$scene-forest-contrast};
+}
+
+.theme-kiosk {
+    --scene-color: #{$scene-kiosk};
+    --scene-contrast: #{$scene-kiosk-contrast};
+}

@@ -1,0 +1,23 @@
+// Rôle : case à cocher avec son libellé
+@use '../abstracts' as *;
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-sm;
+    cursor: pointer;
+
+    &__input {
+        width: $layout-checkbox;
+        height: $layout-checkbox;
+        margin: 0;
+        accent-color: $color-primary;
+        cursor: pointer;
+    }
+
+    &__label {
+        font-size: $font-size-label;
+        line-height: $line-height-label;
+        color: $color-text-body;
+    }
+}

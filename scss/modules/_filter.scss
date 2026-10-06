@@ -1,0 +1,31 @@
+// Rôle : groupe de boutons-filtres (un seul actif à la fois)
+@use '../abstracts' as *;
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+
+    &__button {
+        min-height: $layout-control-compact;
+        padding: 0 $space-md;
+        border: $border-thin solid $color-border;
+        border-radius: $radius-pill;
+        font-size: $font-size-label;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-label;
+        color: $color-text-body;
+        background-color: $color-background;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $color-text;
+        }
+
+        &.is-active {
+            border-color: $color-text;
+            color: $color-background;
+            background-color: $color-text;
+        }
+    }
+}

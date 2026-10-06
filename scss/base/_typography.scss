@@ -1,38 +1,40 @@
+// Rôle : typographie de base (police, titres, texte courant)
+@use '../abstracts' as *;
 
 body {
-    font-family: var(--font-family);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-body);
-    color: var(--color-text-body);
-    background-color: var(--color-background);
+    font-family: $font-family;
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-body;
+    color: $color-text-body;
+    background-color: $color-background;
 }
 
 h1,
 h2,
 h3 {
-    color: var(--color-text);
+    color: $color-text;
 }
 
 h1 {
-    font-size: var(--font-size-display);
-    font-weight: var(--font-weight-black);
-    line-height: var(--line-height-display);
+    font-size: $font-size-display;
+    font-weight: $font-weight-black;
+    line-height: $line-height-display;
 }
 
 h2 {
-    font-size: var(--font-size-heading);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-heading);
+    font-size: $font-size-heading;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-heading;
 }
 
 h3 {
-    font-size: var(--font-size-subheading);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-subheading);
+    font-size: $font-size-subheading;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-subheading;
 }
 
 small {
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
+    font-size: $font-size-small;
+    line-height: $line-height-small;
 }

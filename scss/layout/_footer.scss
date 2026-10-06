@@ -1,0 +1,73 @@
+// Rôle : pied de page du site (présentation, liens, contact, newsletter)
+@use '../abstracts' as *;
+
+.l-footer {
+    padding-top: $space-lg;
+    padding-bottom: $space-md;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    color: $color-footer-text;
+    background-color: $color-text;
+
+    &__grid {
+        display: grid;
+        gap: $space-lg;
+
+        @media (min-width: $breakpoint-tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: $space-sm;
+    }
+
+    &__brand {
+        font-size: $font-size-lead;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-title;
+        color: $color-background;
+    }
+
+    &__title {
+        font-weight: $font-weight-bold;
+        color: $color-background;
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__input {
+        min-height: $layout-control-compact;
+        padding: 0 $space-sm;
+        border: $border-thin solid $color-footer-border;
+        border-radius: $radius-sm;
+        color: $color-background;
+        background-color: $color-footer-field;
+
+        &::placeholder {
+            color: $color-footer-muted;
+        }
+    }
+
+    &__bottom {
+        margin-top: $space-lg;
+        padding-top: $space-md;
+        border-top: $border-thin solid $color-text-body;
+        font-size: $font-size-legend;
+        line-height: $line-height-legend;
+        color: $color-footer-muted;
+    }
+}

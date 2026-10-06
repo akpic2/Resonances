@@ -1,0 +1,102 @@
+// Rôle : bouton — couleurs, tailles, icône, compteur
+@use '../abstracts' as *;
+
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-xs;
+    min-height: $layout-control;
+    padding: 0 $space-md;
+    border: $border-thick solid transparent;
+    border-radius: $radius-sm;
+    font-size: $font-size-body;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-title;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 $border-focus $color-focus-ring;
+    }
+
+    &--primary {
+        color: $color-background;
+        background-color: $color-primary;
+
+        &:hover,
+        &.is-hover {
+            background-color: $color-primary-hover;
+        }
+    }
+
+    &--secondary {
+        color: $color-background;
+        background-color: $color-text;
+
+        &:hover,
+        &.is-hover {
+            background-color: $color-text-body;
+        }
+    }
+
+    &--outline {
+        border-color: $color-text;
+        color: $color-text;
+        background-color: transparent;
+
+        &:hover,
+        &.is-hover {
+            background-color: $color-background-alt;
+        }
+    }
+
+    &--ghost-light {
+        color: $color-text;
+        background-color: $color-background;
+
+        &:hover,
+        &.is-hover {
+            background-color: $color-background-alt;
+        }
+    }
+
+    &--small {
+        min-height: $layout-control-small;
+        padding: 0 $space-sm;
+        font-size: $font-size-small;
+    }
+
+    &--large {
+        min-height: $layout-control-large;
+        padding: 0 $space-lg;
+        font-size: $font-size-large;
+    }
+
+    &--icon-only {
+        width: $layout-control;
+        padding: 0;
+    }
+
+    &__icon {
+        line-height: 1;
+    }
+
+    &__count {
+        position: absolute;
+        top: -$space-xs;
+        right: -$space-xs;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $layout-badge;
+        height: $layout-badge;
+        border: $border-thick solid $color-background;
+        border-radius: $radius-pill;
+        font-size: $font-size-legend;
+        color: $color-background;
+        background-color: $color-primary;
+    }
+}
