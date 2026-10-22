@@ -67,6 +67,11 @@
         &.is-active {
             color: $color-text;
         }
+
+        &.is-active {
+            font-weight: $font-weight-bold;
+            border-bottom: $border-focus solid $color-primary;
+        }
     }
 
     &__actions {

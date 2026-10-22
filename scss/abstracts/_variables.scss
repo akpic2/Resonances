@@ -79,6 +79,7 @@ $space-card: 20px;
 $space-md: 24px;
 $space-lg: 40px;
 $space-xl: 64px;
+$space-section: 80px;
 
 // Rayons
 $radius-xs: 4px;
@@ -94,6 +95,7 @@ $border-logo: 3px;
 $border-strip: 6px;
 
 // Opacité
+$color-overlay: rgba(28, 27, 46, 0.62);
 $opacity-disabled: 0.4;
 
 // Durées
@@ -101,6 +103,11 @@ $duration-spin: 800ms;
 
 // Mise en page
 $layout-container: 1200px;
+$layout-text-narrow: 500px;
+$layout-text-wide: 720px;
+$layout-hero: 560px;
+$layout-banner: 220px;
+$layout-stat: 180px;
 $layout-header-height: 88px;
 $layout-label-column: 240px;
 $layout-card-wide: 720px;
@@ -125,8 +132,8 @@ $layout-logo: 36px;
 $layout-logo-inner: 20px;
 
 // Images des cartes
-$layout-media: 200px;
-$layout-media-large: 280px;
+$layout-media: 216px;
+$layout-media-large: 300px;
 $layout-media-compact: 150px;
 $layout-media-side: 274px;
 

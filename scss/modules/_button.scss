@@ -54,12 +54,14 @@
     }
 
     &--ghost-light {
-        color: $color-text;
-        background-color: $color-background;
+        border-color: $color-background;
+        color: $color-background;
+        background-color: transparent;
 
         &:hover,
         &.is-hover {
-            background-color: $color-background-alt;
+            color: $color-text;
+            background-color: $color-background;
         }
     }
 

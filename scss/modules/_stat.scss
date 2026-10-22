@@ -1,0 +1,25 @@
+// Rôle : chiffre clé (valeur en grand + légende)
+@use '../abstracts' as *;
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-xs;
+    width: $layout-stat;
+    height: $layout-stat;
+    border-radius: $radius-md;
+    background-color: $color-background-alt;
+
+    &__value {
+        font-size: $font-size-display;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-display;
+        color: $color-primary;
+    }
+
+    &__label {
+        color: $color-text-muted;
+    }
+}

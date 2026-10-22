@@ -12,14 +12,7 @@
     &__grid {
         display: grid;
         gap: $space-lg;
-
-        @media (min-width: $breakpoint-tablet) {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @media (min-width: $breakpoint-desktop) {
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-        }
+        grid-template-columns: 2fr 1fr 1fr 1fr;
     }
 
     &__column {

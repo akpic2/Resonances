@@ -1,0 +1,19 @@
+// Rôle : présentation du festival — texte à gauche, chiffres clés à droite
+@use '../abstracts' as *;
+
+.intro {
+    display: grid;
+    gap: $space-lg;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+
+    &__text {
+        max-width: $layout-text-narrow;
+        margin-top: $space-md;
+    }
+
+    &__stats {
+        display: flex;
+        gap: $space-card;
+    }
+}

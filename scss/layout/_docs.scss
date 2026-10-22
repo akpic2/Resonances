@@ -71,10 +71,7 @@
         gap: $space-sm;
         align-items: center;
         margin-top: $space-lg;
-
-        @media (min-width: $breakpoint-tablet) {
-            grid-template-columns: $layout-label-column 1fr;
-        }
+        grid-template-columns: $layout-label-column 1fr;
     }
 
     &__label {
@@ -114,9 +111,7 @@
         }
 
         &--variants {
-            @media (min-width: $breakpoint-desktop) {
-                grid-template-columns: 3fr 2fr 2fr;
-            }
+            grid-template-columns: 3fr 2fr 2fr;
         }
 
         &--single {

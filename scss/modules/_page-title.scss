@@ -1,0 +1,26 @@
+// Rôle : bandeau de titre des pages intérieures (fil d'Ariane, titre, introduction)
+@use '../abstracts' as *;
+
+.page-title {
+    padding: ($space-lg + $space-xs) 0;
+    background-color: $color-background-alt;
+
+    &__breadcrumb {
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        color: $color-text-muted;
+    }
+
+    &__title {
+        margin-top: $space-sm;
+        font-size: $font-size-heading;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+    }
+
+    &__lead {
+        margin-top: $space-xs;
+        font-size: $font-size-lead;
+        line-height: $line-height-lead;
+    }
+}
