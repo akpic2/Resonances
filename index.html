@@ -10,9 +10,152 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="l-header">
+        <div class="l-container l-header__inner">
+            <a class="l-header__logo" href="index.html">
+                <span class="l-header__mark"></span>
+                <div>
+                    <p class="l-header__name">RÉSONANCES</p>
+                    <p class="l-header__tagline">Festival · 9 au 11 juillet 2027</p>
+                </div>
+            </a>
+            <nav class="l-header__nav" aria-label="Navigation principale">
+                <a class="l-header__link is-active" href="index.html" aria-current="page">Accueil</a>
+                <a class="l-header__link" href="programme.html">Programme</a>
+                <a class="l-header__link" href="billetterie.html">Billetterie</a>
+                <a class="l-header__link" href="infos.html">Infos pratiques</a>
+            </nav>
+            <div class="l-header__actions">
+                <button class="button button--outline" type="button" data-theme-toggle>Mode sombre</button>
+                <a class="button button--primary" href="billetterie.html">Réserver</a>
+            </div>
+        </div>
+    </header>
+
     <main>
-        <h1>Accueil</h1>
-        <a href="composants.html">Voir la bibliothèque de composants</a>
+        <section class="hero">
+            <img class="hero__media" src="assets/img/hero.jpg" alt="">
+            <div class="l-container hero__content">
+                <p class="hero__eyebrow">9, 10 et 11 juillet 2027 · Lac des Aulnes</p>
+                <h1 class="hero__title">Trois jours, trois scènes, un lac.</h1>
+                <p class="hero__text">Pop et rock au bord de l’eau, musiques électroniques sous les arbres, jazz au kiosque : quarante artistes à découvrir.</p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="billetterie.html">Réserver mon pass</a>
+                    <a class="button button--ghost-light" href="programme.html">Voir le programme</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="l-section" aria-labelledby="festival-titre">
+            <div class="l-container intro">
+                <div>
+                    <h2 id="festival-titre">Le festival</h2>
+                    <p class="intro__text">Depuis 2015, Résonances réunit chaque été les publics de toutes les musiques sur les rives du lac des Aulnes. Une programmation exigeante, des scènes à taille humaine et un site entièrement accessible à pied.</p>
+                </div>
+                <div class="intro__stats">
+                    <div class="stat">
+                        <p class="stat__value">40</p>
+                        <p class="stat__label">artistes</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat__value">3</p>
+                        <p class="stat__label">scènes</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat__value">3</p>
+                        <p class="stat__label">jours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="l-section" aria-labelledby="affiche-titre">
+            <div class="l-container">
+                <div class="l-section__head">
+                    <h2 class="l-section__title" id="affiche-titre">Têtes d’affiche</h2>
+                    <a class="l-section__link" href="programme.html">Tout le programme →</a>
+                </div>
+                <div class="l-grid">
+                    <div class="card card--headliner theme-lake">
+                        <img class="card__media" src="assets/img/lune-rousse.jpg" alt="Lune Rousse en concert">
+                        <div class="card__body">
+                            <span class="badge badge--lake">Scène du Lac</span>
+                            <h3 class="card__title">Lune Rousse</h3>
+                            <p class="card__meta">Pop · Ven. 9 · 22 h 30</p>
+                            <a class="card__link" href="artiste.html">Voir la fiche →</a>
+                        </div>
+                    </div>
+                    <div class="card card--headliner theme-forest">
+                        <img class="card__media" src="assets/img/ostra.jpg" alt="Ostra en concert">
+                        <div class="card__body">
+                            <span class="badge badge--forest">Scène de la Forêt</span>
+                            <h3 class="card__title">Ostra</h3>
+                            <p class="card__meta">Électro · Sam. 10 · 23 h 45</p>
+                            <a class="card__link" href="artiste.html">Voir la fiche →</a>
+                        </div>
+                    </div>
+                    <div class="card card--headliner theme-kiosk">
+                        <img class="card__media" src="assets/img/trio-sablier.jpg" alt="Trio Sablier en concert">
+                        <div class="card__body">
+                            <span class="badge badge--kiosk">Le Kiosque</span>
+                            <h3 class="card__title">Trio Sablier</h3>
+                            <p class="card__meta">Jazz · Dim. 11 · 19 h 00</p>
+                            <a class="card__link" href="artiste.html">Voir la fiche →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="l-section l-section--last" aria-labelledby="scenes-titre">
+            <div class="l-container">
+                <h2 class="l-section__title" id="scenes-titre">Les scènes</h2>
+                <div class="l-grid">
+                    <div class="scene-banner theme-lake">
+                        <h3 class="scene-banner__title">Scène du Lac</h3>
+                        <p class="scene-banner__genre">Pop et rock</p>
+                        <a class="scene-banner__link" href="programme.html">Découvrir la scène →</a>
+                    </div>
+                    <div class="scene-banner theme-forest">
+                        <h3 class="scene-banner__title">Scène de la Forêt</h3>
+                        <p class="scene-banner__genre">Musiques électroniques</p>
+                        <a class="scene-banner__link" href="programme.html">Découvrir la scène →</a>
+                    </div>
+                    <div class="scene-banner theme-kiosk">
+                        <h3 class="scene-banner__title">Le Kiosque</h3>
+                        <p class="scene-banner__genre">Jazz et acoustique</p>
+                        <a class="scene-banner__link" href="programme.html">Découvrir la scène →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="l-footer">
+        <div class="l-container">
+            <div class="l-footer__grid">
+                <div class="l-footer__column">
+                    <p class="l-footer__brand">RÉSONANCES</p>
+                    <p>Festival de musique au bord du lac des Aulnes. Trois jours, trois scènes, une quarantaine d’artistes.</p>
+                </div>
+                <div class="l-footer__column">
+                    <p class="l-footer__title">Le festival</p>
+                    <a class="l-footer__link" href="programme.html">Programme</a>
+                    <a class="l-footer__link" href="billetterie.html">Billetterie</a>
+                    <a class="l-footer__link" href="infos.html">Infos pratiques</a>
+                </div>
+                <div class="l-footer__column">
+                    <p class="l-footer__title">Contact</p>
+                    <a class="l-footer__link" href="mailto:contact@resonances-festival.fr">contact@resonances-festival.fr</a>
+                    <p>04 00 00 00 00</p>
+                </div>
+                <div class="l-footer__column">
+                    <label class="l-footer__title" for="newsletter-email">Newsletter</label>
+                    <input class="l-footer__input" id="newsletter-email" type="email" placeholder="Votre e-mail">
+                </div>
+            </div>
+            <p class="l-footer__bottom">© 2027 Association Résonances · Mentions légales · Accessibilité · Crédits photos</p>
+        </div>
+    </footer>
 </body>
 </html>

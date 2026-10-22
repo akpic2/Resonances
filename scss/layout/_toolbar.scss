@@ -1,0 +1,25 @@
+// Rôle : barre au-dessus du programme (filtres à gauche, nombre de concerts à droite)
+@use '../abstracts' as *;
+
+.l-toolbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: $space-sm $space-md;
+    padding-top: $space-xs;
+
+    &__label {
+        margin-bottom: $space-xs;
+        font-size: $font-size-caption;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-caption;
+        color: $color-text-muted;
+    }
+
+    &__count {
+        margin-bottom: $space-xs;
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        color: $color-text-muted;
+    }
+}
