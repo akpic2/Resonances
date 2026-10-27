@@ -3,7 +3,7 @@
 Intégration du site du festival Résonances — Sass, architecture SMACSS, convention BEM.
 
 ## Site en ligne
-URL Vercel : https://resonances-7usmpczzz-mathurins-projects-c46a20b9.vercel.app/
+URL Vercel : https://resonances-3rcjgmd3x-mathurins-projects-c46a20b9.vercel.app/
 
 ## Installation
 ```bash
