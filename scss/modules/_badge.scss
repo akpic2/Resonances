@@ -29,6 +29,11 @@
         background-color: $scene-kiosk;
     }
 
+    &--inverse {
+        color: var(--scene-color, $color-text);
+        background-color: $color-background;
+    }
+
     &--new {
         color: $color-success;
         background-color: $color-success-soft;

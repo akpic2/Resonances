@@ -223,15 +223,20 @@ small {
   align-items: center;
   justify-content: space-between;
   gap: 8px 24px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .l-section__title {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .l-section__head .l-section__title {
   margin-bottom: 0;
 }
+.l-section__title--sub {
+  font-size: 28px;
+  line-height: 1.2857142857;
+}
 .l-section__title--day {
+  margin-bottom: 24px;
   padding-bottom: 8px;
   border-bottom: 1px solid #E3E5EA;
   font-size: 28px;
@@ -534,6 +539,13 @@ small {
 .button--primary:hover, .button--primary.is-hover {
   background-color: #A3311F;
 }
+.button--scene {
+  color: var(--scene-contrast, #FFFFFF);
+  background-color: var(--scene-color, #C8402A);
+}
+.button--scene:hover, .button--scene.is-hover {
+  opacity: 0.9;
+}
 .button--secondary {
   color: #FFFFFF;
   background-color: #1C1B2E;
@@ -615,6 +627,10 @@ small {
 .badge--kiosk {
   color: #1C1B2E;
   background-color: #B87A1E;
+}
+.badge--inverse {
+  color: var(--scene-color, #1C1B2E);
+  background-color: #FFFFFF;
 }
 .badge--new {
   color: #2F6B3A;
@@ -741,7 +757,7 @@ small {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
+  padding: 32px;
   border: 1px solid #E3E5EA;
   border-radius: 12px;
   background-color: #FFFFFF;
@@ -749,39 +765,47 @@ small {
 .pass__ribbon {
   position: absolute;
   top: -16px;
-  left: 20px;
-  padding: 8px 16px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 24px;
   border-radius: 999px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1;
   color: #1C1B2E;
   background-color: #F4C95D;
 }
 .pass__title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.25;
   color: #1C1B2E;
 }
 .pass__price {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #C8402A;
+}
+.pass__text {
+  font-size: 14px;
+  line-height: 1.5714285714;
+  color: #6B6A80;
 }
 .pass__features {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: 16px;
-  padding-top: 16px;
+  padding-top: 24px;
   border-top: 1px solid #E3E5EA;
   list-style: none;
 }
 .pass__feature {
-  font-size: 14px;
-  line-height: 1.5714285714;
+  font-size: 15px;
+  line-height: 1.2;
   color: #3A3950;
 }
 .pass__feature::before {
@@ -802,6 +826,9 @@ small {
 }
 .pass--featured .pass__price {
   color: #F4C95D;
+}
+.pass--featured .pass__text {
+  color: #C9C7D6;
 }
 .pass--featured .pass__features {
   border-top-color: #3A3950;
@@ -844,10 +871,12 @@ small {
 
 .info-block {
   display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 16px;
+  grid-template-columns: 44px 1fr;
+  gap: 24px 16px;
+  align-content: start;
   align-items: center;
-  padding: 24px;
+  min-height: 300px;
+  padding: 32px;
   border: 1px solid #E3E5EA;
   border-radius: 12px;
   background-color: #FFFFFF;
@@ -856,24 +885,24 @@ small {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   color: #C8402A;
   background-color: #F4F5F7;
 }
 .info-block__title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.25;
   color: #1C1B2E;
 }
 .info-block__text {
   grid-column: 1/-1;
-  font-size: 13px;
-  line-height: 1.2307692308;
+  font-size: 15px;
+  line-height: 1.8666666667;
   color: #3A3950;
 }
 
@@ -968,7 +997,7 @@ small {
 .faq {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
 }
 .faq__item {
@@ -986,9 +1015,9 @@ small {
   justify-content: space-between;
   gap: 16px;
   width: 100%;
-  padding: 24px 40px;
+  padding: 24px 32px;
   border: 0;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.25;
   text-align: left;
@@ -1006,8 +1035,9 @@ small {
 }
 .faq__answer {
   display: none;
-  padding: 0 40px 24px;
-  font-size: 15px;
+  max-width: 844px;
+  padding: 0 32px 24px;
+  font-size: 16px;
   line-height: 1.625;
   color: #3A3950;
 }
@@ -1123,6 +1153,141 @@ small {
 .intro__stats {
   display: flex;
   gap: 20px;
+}
+
+.artist-header {
+  padding: 48px 0 64px;
+  color: var(--scene-contrast, #FFFFFF);
+  background-color: var(--scene-color, #1C1B2E);
+}
+.artist-header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.artist-header__breadcrumb {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.5714285714;
+}
+.artist-header__title {
+  margin-top: 8px;
+  text-transform: uppercase;
+  color: inherit;
+}
+.artist-header__meta {
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.artist {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.artist__media {
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.artist__heading {
+  font-size: 28px;
+  line-height: 1.2857142857;
+}
+.artist__text {
+  max-width: 440px;
+  margin-top: 16px;
+}
+.artist__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 40px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #F4F5F7;
+}
+.artist__row {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  align-items: center;
+}
+.artist__label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5714285714;
+  color: #6B6A80;
+}
+.artist__value {
+  margin: 0;
+  color: #1C1B2E;
+}
+.artist__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.booking-form {
+  padding: 48px;
+  border: 1px solid #E3E5EA;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+}
+.booking-form__title {
+  font-size: 28px;
+  line-height: 1.2857142857;
+}
+.booking-form__hint {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5714285714;
+  color: #6B6A80;
+}
+.booking-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 24px;
+}
+.booking-form__terms {
+  margin-top: 40px;
+}
+.booking-form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+.booking-form__total {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1C1B2E;
+}
+
+.contact-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #F4F5F7;
+}
+.contact-band__title {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.contact-band__text {
+  margin-top: 8px;
+}
+.contact-band__action {
+  min-width: 188px;
 }
 
 .is-disabled {

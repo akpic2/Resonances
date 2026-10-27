@@ -1,0 +1,25 @@
+// Rôle : bandeau de contact en bas de page (question à gauche, bouton à droite)
+@use '../abstracts' as *;
+
+.contact-band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-md;
+    padding: $space-lg;
+    border-radius: $radius-md;
+    background-color: $color-background-alt;
+
+    &__title {
+        font-size: $font-size-title-xl;
+        line-height: $line-height-title;
+    }
+
+    &__text {
+        margin-top: $space-xs;
+    }
+
+    &__action {
+        min-width: $layout-action;
+    }
+}

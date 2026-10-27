@@ -32,6 +32,16 @@
         }
     }
 
+    &--scene {
+        color: var(--scene-contrast, $color-background);
+        background-color: var(--scene-color, $color-primary);
+
+        &:hover,
+        &.is-hover {
+            opacity: 0.9;
+        }
+    }
+
     &--secondary {
         color: $color-background;
         background-color: $color-text;

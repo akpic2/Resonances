@@ -4,9 +4,11 @@
 .info-block {
     display: grid;
     grid-template-columns: $layout-circle 1fr;
-    gap: $space-sm;
+    gap: $space-md $space-sm;
+    align-content: start;
     align-items: center;
-    padding: $space-md;
+    min-height: $layout-info-block;
+    padding: $space-box;
     border: $border-thin solid $color-border;
     border-radius: $radius-md;
     background-color: $color-background;
@@ -18,14 +20,14 @@
         width: $layout-circle;
         height: $layout-circle;
         border-radius: $radius-pill;
-        font-size: $font-size-label;
+        font-size: $font-size-body;
         font-weight: $font-weight-bold;
         color: $color-primary;
         background-color: $color-background-alt;
     }
 
     &__title {
-        font-size: $font-size-large;
+        font-size: $font-size-lead;
         font-weight: $font-weight-bold;
         line-height: $line-height-title;
         color: $color-text;
@@ -33,8 +35,8 @@
 
     &__text {
         grid-column: 1 / -1;
-        font-size: $font-size-caption;
-        line-height: $line-height-caption;
+        font-size: $font-size-label;
+        line-height: $line-height-info;
         color: $color-text-body;
     }
 }

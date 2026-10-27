@@ -17,18 +17,24 @@
         align-items: center;
         justify-content: space-between;
         gap: $space-xs $space-md;
-        margin-bottom: $space-md;
+        margin-bottom: $space-box;
     }
 
     &__title {
-        margin-bottom: $space-md;
+        margin-bottom: $space-box;
     }
 
     &__head &__title {
         margin-bottom: 0;
     }
 
+    &__title--sub {
+        font-size: $font-size-subheading;
+        line-height: $line-height-subheading;
+    }
+
     &__title--day {
+        margin-bottom: $space-md;
         padding-bottom: $space-xs;
         border-bottom: $border-thin solid $color-border;
         font-size: $font-size-subheading;
