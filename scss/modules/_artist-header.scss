@@ -1,0 +1,32 @@
+// Rôle : bandeau de titre d'une fiche artiste, aux couleurs de la scène (classe theme-*)
+@use '../abstracts' as *;
+
+.artist-header {
+    padding: $space-form 0 $space-xl;
+    color: var(--scene-contrast, $color-background);
+    background-color: var(--scene-color, $color-text);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__breadcrumb {
+        margin-bottom: $space-md;
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+    }
+
+    &__title {
+        margin-top: $space-xs;
+        text-transform: uppercase;
+        color: inherit;
+    }
+
+    &__meta {
+        margin-top: $space-sm;
+        font-size: $font-size-lead;
+        line-height: $line-height-lead;
+    }
+}

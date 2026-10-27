@@ -1,0 +1,47 @@
+// Rôle : formulaire de réservation de la billetterie (champs en deux colonnes, total et validation)
+@use '../abstracts' as *;
+
+.booking-form {
+    padding: $space-form;
+    border: $border-thin solid $color-border;
+    border-radius: $radius-md;
+    background-color: $color-background;
+
+    &__title {
+        font-size: $font-size-subheading;
+        line-height: $line-height-subheading;
+    }
+
+    &__hint {
+        margin-top: $space-xs;
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        color: $color-text-muted;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $space-md;
+        align-items: start;
+        margin-top: $space-md;
+    }
+
+    &__terms {
+        margin-top: $space-lg;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: $space-form;
+    }
+
+    &__total {
+        font-size: $font-size-lead;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-title;
+        color: $color-text;
+    }
+}

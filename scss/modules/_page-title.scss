@@ -2,7 +2,7 @@
 @use '../abstracts' as *;
 
 .page-title {
-    padding: ($space-lg + $space-xs) 0;
+    padding: $space-form 0;
     background-color: $color-background-alt;
 
     &__breadcrumb {

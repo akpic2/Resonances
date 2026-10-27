@@ -1,0 +1,60 @@
+// Rôle : contenu d'une fiche artiste — photo à gauche, biographie, infos et boutons à droite
+@use '../abstracts' as *;
+
+.artist {
+    display: grid;
+    grid-template-columns: $layout-artist-media-width 1fr;
+    gap: $space-xl;
+    align-items: start;
+
+    &__media {
+        width: 100%;
+        height: $layout-artist-media-height;
+        border-radius: $radius-md;
+        object-fit: cover;
+    }
+
+    &__heading {
+        font-size: $font-size-subheading;
+        line-height: $line-height-subheading;
+    }
+
+    &__text {
+        max-width: $layout-text-medium;
+        margin-top: $space-sm;
+    }
+
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xs;
+        margin-top: $space-lg;
+        padding: $space-md;
+        border-radius: $radius-md;
+        background-color: $color-background-alt;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: $layout-info-label 1fr;
+        align-items: center;
+    }
+
+    &__label {
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-small;
+        color: $color-text-muted;
+    }
+
+    &__value {
+        margin: 0;
+        color: $color-text;
+    }
+
+    &__actions {
+        display: flex;
+        gap: $space-sm;
+        margin-top: $space-md;
+    }
+}

@@ -58,7 +58,8 @@ $font-size-large: 18px;
 $font-size-title-sm: 17px;
 $font-size-title-md: 22px;
 $font-size-title-lg: 26px;
-$font-size-price: 36px;
+$font-size-title-xl: 24px;
+$font-size-price: 40px;
 
 // Interlignes sans unité : interligne de la maquette ÷ taille de police
 $line-height-display: calc(64 / 56);
@@ -71,6 +72,7 @@ $line-height-small: calc(22 / 14);
 $line-height-caption: calc(16 / 13);
 $line-height-legend: calc(15 / 12);
 $line-height-title: 1.25;
+$line-height-info: calc(28 / 15);
 
 // Espacements
 $space-xs: 8px;
@@ -80,6 +82,8 @@ $space-md: 24px;
 $space-lg: 40px;
 $space-xl: 64px;
 $space-section: 80px;
+$space-box: 32px;
+$space-form: 48px;
 
 // Rayons
 $radius-xs: 4px;
@@ -104,10 +108,17 @@ $duration-spin: 800ms;
 // Mise en page
 $layout-container: 1200px;
 $layout-text-narrow: 500px;
+$layout-text-medium: 440px;
 $layout-text-wide: 720px;
+$layout-text-long: 780px;
 $layout-hero: 560px;
 $layout-banner: 220px;
 $layout-stat: 180px;
+$layout-info-block: 300px;
+$layout-info-label: 112px;
+$layout-action: 188px;
+$layout-artist-media-width: 560px;
+$layout-artist-media-height: 420px;
 $layout-header-height: 88px;
 $layout-label-column: 240px;
 $layout-card-wide: 720px;
@@ -125,7 +136,7 @@ $layout-control-large: 56px;
 $layout-badge: 24px;
 $layout-badge-large: 32px;
 $layout-checkbox: 22px;
-$layout-circle: 40px;
+$layout-circle: 44px;
 $layout-chevron: 10px;
 $layout-spinner: 18px;
 $layout-logo: 36px;
